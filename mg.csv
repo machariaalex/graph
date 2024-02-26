@@ -1,0 +1,501 @@
+,Start Time,Start Location,End Time,End Location,Registration,Start Geofence,End Geofence,Trip Distance
+0,2023-12-10 16:15:39,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-12-10 17:03:15,"Goba, Kinondoni, Dar es Salaam, Tanzania",T452EBA,Out of Route,Out of Route,7.2
+1,2023-11-28 09:35:54,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-28 09:54:08,"Lumumba, Sabasaba, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,3.0
+2,2023-12-11 20:26:20,"Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-12-11 21:23:53,"Kawe, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,0.0
+3,2024-01-04 09:24:11,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-04 09:31:29,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+4,2024-01-29 22:55:47,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-29 22:56:43,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Out of Route,2.6
+5,2023-10-28 15:43:36,"Shaabani Robert Street, Kivukoni, Ilala, Dar es Salaam, Tanzania",2023-10-28 16:18:35,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,444.4
+6,2023-11-29 09:50:01,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-11-29 09:53:47,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,9.8
+7,2023-10-13 17:24:55,"Ugweno Street, Tandika, Temeke, Dar es Salaam, Tanzania",2023-10-13 18:37:19,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,3.5
+8,2023-12-14 16:30:53,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-14 16:45:45,"Ufukoni Road, Kivukoni, Ilala, Dar es Salaam, Tanzania",T248EBJ,Out of Route,Out of Route,3.2
+9,2023-11-25 07:58:10,"Makangarawe, Temeke, Dar es Salaam, Tanzania",2023-11-25 08:17:15,"Charambe, Temeke, Dar es Salaam, Tanzania",T258DXJ,D&J,Shomi,9.9
+10,2023-12-04 16:33:15,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-04 16:42:21,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T452EBA,Sanku : Dodoma,Out of Route,8.3
+11,2023-12-18 16:52:56,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-12-18 17:01:16,"Segerea, Ilala, Dar es Salaam, Tanzania",T258DXJ,Out of Route,Out of Route,0.0
+12,2023-10-06 12:40:01,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-06 13:10:44,"Mlali, Mvomero, Morogoro, Tanzania",T852DZQ,Out of Route,Out of Route,0.0
+13,2023-10-21 18:12:08,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-10-21 18:22:06,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T853DZQ,Out of Route,Out of Route,1.8
+14,2024-01-30 14:37:29,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",2024-01-30 14:41:02,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Sanku : Morogoro,0.0
+15,2023-10-05 15:00:30,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-10-05 15:27:49,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Sanku : Dodoma,Genevieve,2.6
+16,2023-11-20 09:44:21,"Uwanja wa ndege, Morogoro Urban, Morogoro, Tanzania",2023-11-20 09:51:52,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.2
+17,2024-01-09 16:07:55,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-09 17:08:50,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Morieno,Out of Route,8.9
+18,2024-01-16 14:35:53,"Manzese, Kinondoni, Dar es Salaam, Tanzania",2024-01-16 15:11:46,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,0.5
+19,2023-10-24 14:08:22,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-24 14:14:48,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T853DZQ,Kipipa Millers,Kipipa Millers,0.0
+20,2023-10-03 09:57:40,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-10-03 09:59:54,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Sanku : Morogoro,3.9
+21,2024-01-17 18:52:33,"Kilwa Road, Mbagala Kuu, Temeke, Dar es Salaam, Tanzania",2024-01-17 19:44:44,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,3.4
+22,2023-12-08 18:58:17,"Mwananyamala, Kinondoni, Dar es Salaam, Tanzania",2023-12-08 19:17:37,"Somanga Street, Magomeni, Kinondoni, Dar es Salaam, Tanzania",T452EBA,Out of Route,Out of Route,6.1
+23,2024-01-09 11:23:47,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-09 12:07:32,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,KB Nunge,0.1
+24,2023-12-30 17:59:21,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-30 18:00:05,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Mbuji,Mbuji,0.0
+25,2023-12-20 19:44:30,"Morogoro Road, Makurumla, Kinondoni, Dar es Salaam, Tanzania",2023-12-20 19:54:16,"Morogoro Road, Ubungo, Kinondoni, Dar es Salaam, Tanzania",T248EBJ,Out of Route,Out of Route,13.4
+26,2023-10-11 12:45:28,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-10-11 13:26:30,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Sanku : Mikocheni,4.7
+27,2024-01-12 14:51:34,"Kichangani, Morogoro Urban, Morogoro, Tanzania",2024-01-12 15:13:08,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+28,2023-10-26 08:31:59,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-10-26 08:53:54,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T862DQM,Out of Route,Out of Route,7.6
+29,2023-10-24 10:19:25,"Livingstone Street, Gerezani, Ilala, Dar es Salaam, Tanzania",2023-10-24 10:30:15,"Shaurimoyo, Mchikichini, Ilala, Dar es Salaam, Tanzania",DFP8546,Out of Route,Sanku : Mikocheni,4.0
+30,2024-01-25 18:59:43,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-25 19:00:25,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Sanku : Dodoma,Sanku : Dodoma,0.0
+31,2023-10-05 10:40:37,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-05 10:48:52,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Sanku : Dodoma,Out of Route,12.5
+32,2023-11-27 16:49:36,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-27 17:16:32,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,SFAKS ENTERPRISES,Halelwa,3.9
+33,2023-12-06 14:14:40,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-12-06 14:20:37,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,5.2
+34,2023-11-27 19:51:07,"Old Bagamoyo Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-11-27 20:30:23,"Old Bagamoyo Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Tamiwai Investment co.,3.6
+35,p,,,,T934DMX,Out of Route,Out of Route,0.0
+36,2023-11-28 15:02:00,"Madaraka, Mji mkuu, Morogoro Urban, Morogoro, Tanzania",2023-11-28 15:06:17,"Sultan Area, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,6.4
+37,2024-01-23 07:56:14,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2024-01-23 08:08:30,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T141DKS,Out of Route,Out of Route,5.5
+38,2023-11-21 13:23:24,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-21 13:49:31,"Manzese, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,6.5
+39,2023-11-21 11:15:50,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-11-21 11:31:02,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Sanku : Mikocheni,10.4
+40,2023-11-25 16:23:25,"Manzese, Kinondoni, Dar es Salaam, Tanzania",2023-11-25 17:24:02,"Kinyerezi, Ilala, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,17.6
+41,2023-12-07 12:19:18,"Kunduchi, Kinondoni, Dar es Salaam, Tanzania",2023-12-07 13:04:40,"Goba, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,12.8
+42,2023-10-13 20:20:43,"Madaraka, Mji mkuu, Morogoro Urban, Morogoro, Tanzania",2023-10-13 20:30:23,"Kichangani, Morogoro Urban, Morogoro, Tanzania",T853DZQ,Sanku : Mwanza,Sanku : Mwanza,0.0
+43,2024-01-16 14:05:24,"Muhonda Street, Mchikichini, Ilala, Dar es Salaam, Tanzania",2024-01-16 14:44:10,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,0.0
+44,2023-10-16 08:34:16,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-16 08:52:32,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,0.8
+45,2024-01-22 14:35:24,"B129, Kihonda, Morogoro Urban, Morogoro, Tanzania",2024-01-22 14:57:28,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Sanku : Morogoro,3.6
+46,2023-12-08 08:57:12,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-12-08 09:05:11,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T850DZQ,Out of Route,Out of Route,14.4
+47,2023-12-01 15:10:13,"Yombo Vituka, Temeke, Dar es Salaam, Tanzania",2023-12-01 15:43:14,"Kitunda, Ilala, Dar es Salaam, Tanzania",T240EBJ,Kanaani,Sanku : Morogoro,2.4
+48,2023-12-31 12:31:20,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-31 12:32:27,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,Out of Route,Out of Route,33.0
+49,2024-01-25 15:58:55,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-25 16:25:37,"Manzese, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Sanku : Morogoro,Out of Route,2.4
+50,2023-11-20 13:43:37,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-11-20 13:49:43,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,SN Milling,Out of Route,2.9
+51,2024-01-26 12:13:30,"A7, Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-26 12:18:40,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,1.4
+52,2023-12-13 11:45:00,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-13 11:48:54,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T248EBJ,Out of Route,Out of Route,5.4
+53,2024-01-19 17:46:35,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2024-01-19 18:13:09,"Uwanja wa ndege, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,3.4
+54,2023-12-11 11:22:36,"Mkunguni Street, Kariakoo, Ilala, Dar es Salaam, Tanzania",2023-12-11 11:48:32,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Sanku : Morogoro,Sanku : Morogoro,0.0
+55,2023-12-31 12:40:07,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-31 13:54:45,"Kariakoo Street, Jangwani, Ilala, Dar es Salaam, Tanzania",T196DQG,Mbuji,Mbuji,12.1
+56,2023-12-21 20:05:16,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-12-21 20:06:05,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+57,2023-11-08 14:55:40,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-11-08 15:05:25,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,1.3
+58,2024-01-11 12:30:25,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-11 12:37:46,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Sanku : Morogoro,1.1
+59,2024-01-06 12:00:49,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-06 12:11:47,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.8
+60,2023-12-23 10:28:56,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-23 10:43:25,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Out of Route,Moses Malimi,11.9
+61,2023-11-28 13:10:39,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-28 13:24:54,"Old Bagamoyo Road, Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,3.3
+62,2023-10-26 15:30:41,"Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",2023-10-26 15:38:45,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,0.2
+63,2023-10-03 16:32:42,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-10-03 16:52:53,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,0.0
+64,2024-01-19 20:26:52,"Somanga Street, Magomeni, Kinondoni, Dar es Salaam, Tanzania",2024-01-19 20:39:53,"Lumumba Street, Mchafukoge, Ilala, Dar es Salaam, Tanzania",MC473DKX,Sanku : Mikocheni,Sanku : Mikocheni,0.0
+65,2023-11-19 11:16:41,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-11-19 13:07:09,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Sanku : Mikocheni,Sanku : Mikocheni,0.0
+66,2023-12-20 14:52:22,"B127, Diongoya, Mvomero, Morogoro, Tanzania",2023-12-20 14:55:43,"B127, Diongoya, Mvomero, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+67,2023-12-21 09:11:54,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-12-21 10:40:58,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",MC473DKX,Sanku : Mikocheni,Out of Route,3.2
+68,2023-11-23 19:50:10,"Yombo Vituka, Temeke, Dar es Salaam, Tanzania",2023-11-23 20:36:49,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Sanku : Morogoro,Sanku : Morogoro,0.0
+69,2023-11-15 13:27:52,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-11-15 13:33:13,"Msasani, Kinondoni, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,1.3
+70,2023-12-21 08:31:31,"Dahomey Road, Kinondoni, Dar es Salaam, Tanzania",2023-12-21 08:47:49,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,0.0
+71,2023-11-25 14:56:31,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-11-25 15:09:38,"Shekitango Road, Sinza, Kinondoni, Dar es Salaam, Tanzania",MC315DKY,Out of Route,Out of Route,5.8
+72,2024-01-18 16:34:28,"Kunduchi, Kinondoni, Dar es Salaam, Tanzania",2024-01-18 16:52:37,"Kunduchi, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Mahanze,4.4
+73,2023-10-27 18:17:05,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-27 18:17:34,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,1.6
+74,2023-11-14 11:27:58,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-14 11:28:45,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T257DXJ,Furaha,Out of Route,10.6
+75,2024-01-12 18:52:03,"Mji mkuu, Morogoro Urban, Morogoro, Tanzania",2024-01-12 18:58:52,"Kichangani, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.9
+76,2023-11-15 12:25:02,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-15 12:44:12,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,3.3
+77,2023-11-20 06:21:29,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2023-11-20 06:54:40,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",T934DMX,Raphael Group,Out of Route,0.0
+78,2023-10-19 10:22:01,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-19 10:45:11,"Sinza, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,0.0
+79,2024-01-29 08:44:29,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-29 08:44:41,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+80,2024-01-22 14:32:24,"B129, Kihonda, Morogoro Urban, Morogoro, Tanzania",2024-01-22 14:32:45,"B129, Kihonda, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Sanku : Morogoro,Out of Route,1.0
+81,2024-01-09 09:05:04,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2024-01-09 09:37:37,"Sabasaba, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,12.7
+82,2023-12-19 16:25:58,"Mazimbu, Morogoro Urban, Morogoro, Tanzania",2023-12-19 16:34:14,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,3.3
+83,2023-11-02 16:24:43,"Charambe, Temeke, Dar es Salaam, Tanzania",2023-11-02 16:27:25,"Charambe, Temeke, Dar es Salaam, Tanzania",T257DXJ,Out of Route,Out of Route,0.6
+84,2024-01-12 12:21:05,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-12 12:30:54,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,2.3
+85,2023-10-20 12:39:23,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-20 13:03:41,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,0.3
+86,2024-01-11 18:06:25,"Rashidi Kawawa Street, Mwananyamala, Kinondoni, Dar es Salaam, Tanz",2024-01-11 18:24:44,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Sanku : Mikocheni,Isanga,5.1
+87,2023-12-08 22:10:54,"Nelson Mandela Road, Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-12-08 22:14:05,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T452EBA,Out of Route,Out of Route,7.0
+88,2023-10-25 12:25:39,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-25 14:17:01,"Kawe, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Sanku : Morogoro,3.7
+89,2023-12-06 14:26:16,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-12-06 14:39:21,"Kingo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,5.3
+90,2023-11-01 15:51:19,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-11-01 16:28:04,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Sanku : Dodoma,3.0
+91,2023-11-17 10:12:57,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-17 10:13:29,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,1.1
+92,2023-10-31 18:17:18,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-10-31 18:55:23,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Sanku : Morogoro,Out of Route,1.1
+93,2023-11-24 18:04:47,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-24 19:28:16,"Kinyerezi, Ilala, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,0.2
+94,2023-11-21 12:53:15,"Kihonda, Morogoro Urban, Morogoro, Tanzania",2023-11-21 12:59:22,"Kihonda, Morogoro Urban, Morogoro, Tanzania",T457EBA,Lake Food,Astrica Mill,1.6
+95,2023-10-01 08:16:37,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-01 08:34:11,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T452EBA,Sanku : Dodoma,Sanku : Dodoma,0.0
+96,2024-01-30 14:06:46,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2024-01-30 14:17:35,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,0.0
+97,2023-10-25 08:40:47,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-10-25 09:02:49,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T862DQM,Out of Route,Moshono Millers Ltd,3.8
+98,2024-01-25 12:01:07,"Kijito Nyama, Kinondoni, Dar es Salaam, Tanzania",2024-01-25 12:05:00,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,4.3
+99,2023-10-31 14:16:21,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-31 14:22:32,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,0.0
+100,2023-11-16 15:12:48,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-11-16 15:28:07,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.1
+101,2023-10-04 15:09:26,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-04 15:10:37,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,19.7
+102,2023-12-15 10:37:58,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-15 10:41:00,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T248EBJ,Out of Route,Out of Route,0.0
+103,2024-01-28 15:07:52,"Kidodi, Kilosa, Morogoro, Tanzania",2024-01-28 15:38:11,"A7, Mikumi, Kilosa, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,3.8
+104,2023-10-19 12:45:10,"Manzese, Kinondoni, Dar es Salaam, Tanzania",2023-10-19 13:12:10,"Azimio, Temeke, Dar es Salaam, Tanzania",T191DWL,Out of Route,Out of Route,3.5
+105,2023-11-30 12:21:14,"Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",2023-11-30 12:31:46,"Kingo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.4
+106,2024-01-02 08:04:04,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2024-01-02 08:04:42,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T850DZQ,Out of Route,Out of Route,22.8
+107,2023-10-09 13:40:47,"Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-10-09 13:46:50,"Msasani, Kinondoni, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,1.8
+108,2024-01-12 13:33:28,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2024-01-12 14:06:12,"Sinza, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,0.0
+109,2024-01-23 18:10:14,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-23 18:19:35,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Out of Route,5.5
+110,2024-01-23 12:34:04,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-23 12:34:14,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Out of Route,0.0
+111,2024-01-11 17:27:28,"Goba, Kinondoni, Dar es Salaam, Tanzania",2024-01-11 17:46:08,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,EXUNOVA MILLING,Out of Route,4.0
+112,2023-12-07 07:22:46,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-12-07 07:23:03,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T850DZQ,Out of Route,Out of Route,46.0
+113,2024-01-15 12:32:46,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-15 12:52:21,"Msasani, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,1.5
+114,2023-10-18 13:28:51,"Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-10-18 13:35:55,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,0.5
+115,2023-10-20 17:44:07,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-10-20 18:41:05,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,0.0
+116,2023-11-20 11:14:11,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-11-20 11:20:31,"Sultan Area, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,1.4
+117,2023-10-17 14:18:17,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-17 14:21:23,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,0.0
+118,2023-11-29 15:02:08,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-29 15:08:20,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,PSR Mill - A,0.3
+119,2023-11-30 15:34:37,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-11-30 15:38:11,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+120,2024-01-12 12:05:54,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-12 12:10:20,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+121,2023-12-19 17:25:30,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-12-19 17:34:10,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T850DZQ,Sanku : Mikocheni,Safari,5.6
+122,2023-11-10 12:35:23,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-10 13:00:07,"Kihonda, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Sanku : Dodoma,Out of Route,0.6
+123,2023-11-29 12:13:58,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-29 12:35:08,"Kihonda, Morogoro Urban, Morogoro, Tanzania",T457EBA,Sanku : Mwanza,Out of Route,30.4
+124,2023-10-13 14:03:56,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-13 14:04:47,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Sanku : Dodoma,3.9
+125,2023-10-26 16:12:51,"Kingo, Morogoro Urban, Morogoro, Tanzania",2023-10-26 16:17:42,"Kingo, Morogoro Urban, Morogoro, Tanzania",T862DQM,Out of Route,Out of Route,0.0
+126,2023-10-17 19:51:17,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-17 19:52:35,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,15.2
+127,2023-11-01 18:41:10,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-01 18:42:16,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,1.2
+128,2023-11-23 12:22:58,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-11-23 12:23:17,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T457EBA,Kalokola Grain Mill,Out of Route,0.2
+129,2023-10-05 19:09:32,"A7, Mazimbu, Morogoro Urban, Morogoro, Tanzania",2023-10-05 19:44:06,"Kichangani, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,3.6
+130,2023-12-13 08:51:43,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-12-13 08:51:52,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T850DZQ,Out of Route,Out of Route,0.0
+131,2023-10-04 16:16:06,"Bunju, Kinondoni, Dar es Salaam, Tanzania",2023-10-04 16:56:25,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,13.8
+132,2023-11-22 16:50:23,"Sandali, Temeke, Dar es Salaam, Tanzania",2023-11-22 18:05:02,"Tambani, Mkuranga, Pwani, Tanzania",T240EBJ,Out of Route,Sanku : Morogoro,1.8
+133,2024-01-13 13:51:31,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",2024-01-13 13:53:28,"Morogoro Road, Ubungo, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,0.0
+134,2024-01-17 17:34:15,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-17 17:44:49,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Out of Route,1.5
+135,2023-11-28 14:49:01,"Makangarawe, Temeke, Dar es Salaam, Tanzania",2023-11-28 15:10:43,"Yombo Vituka, Temeke, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,0.6
+136,2023-12-05 10:26:01,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-05 11:22:03,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,Out of Route,Sanku : Mikocheni,0.0
+137,2024-01-11 11:23:35,"Sultan Area, Morogoro Urban, Morogoro, Tanzania",2024-01-11 11:23:54,"Sultan Area, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.4
+138,2024-01-04 17:53:20,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",2024-01-04 18:37:38,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,N.A Mill-B,Sanku : Mikocheni,27.7
+139,2024-01-18 12:36:34,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-18 12:42:44,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Amani Milling  B,Sanku : Morogoro,1.7
+140,2023-10-04 13:19:50,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-04 13:29:39,"Kichangani, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,2.3
+141,2023-12-19 16:02:12,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-12-19 17:01:00,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Sanku : Morogoro,Sanku : Morogoro,0.0
+142,2023-10-09 13:29:15,"Charambe, Temeke, Dar es Salaam, Tanzania",2023-10-09 13:36:34,"Charambe, Temeke, Dar es Salaam, Tanzania",T141DKS,Out of Route,Out of Route,17.0
+143,2023-11-01 15:49:02,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-01 16:11:45,"Dar Es Salaam, Boma, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Sanku : Dodoma,Out of Route,4.4
+144,2023-10-19 14:01:05,"B127, Hembeti, Mvomero, Morogoro, Tanzania",2023-10-19 14:03:05,"B127, Hembeti, Mvomero, Morogoro, Tanzania",T853DZQ,Sanku : Mwanza,Sanku : Mwanza,0.0
+145,2023-12-05 15:04:56,"Kigamboni, Temeke, Dar es Salaam, Tanzania",2023-12-05 15:55:38,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Sanku : Morogoro,1.8
+146,2023-12-15 10:55:47,"Kingo, Morogoro Urban, Morogoro, Tanzania",2023-12-15 10:56:56,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.5
+147,2023-12-18 11:53:04,"Old Bagamoyo Road, Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-18 12:02:05,"Old Bagamoyo Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,0.0
+148,2023-12-18 00:19:49,"Madaraka, Mji mkuu, Morogoro Urban, Morogoro, Tanzania",2023-12-18 00:20:52,"Madaraka, Sultan Area, Morogoro Urban, Morogoro, Tanzania",MC473DKX,Sanku : Mikocheni,Sanku : Mikocheni,0.1
+149,2024-01-08 09:07:47,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-08 09:13:20,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,6.6
+150,2023-10-06 13:20:16,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-06 13:25:31,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,0.4
+151,2024-01-19 20:42:47,"Lumumba Street, Mchafukoge, Ilala, Dar es Salaam, Tanzania",2024-01-19 20:57:14,"Nelson Mandela Road, Kurasini, Temeke, Dar es Salaam, Tanzania",MC473DKX,Sanku : Mikocheni,Isanga,5.1
+152,p,,,,T980DMT,Out of Route,Out of Route,2.0
+153,2023-12-29 10:37:55,"Morogoro Road, Ubungo, Kinondoni, Dar es Salaam, Tanzania",2023-12-29 10:51:09,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Sanku : Morogoro,Out of Route,6.1
+154,2023-10-31 15:32:30,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-31 15:58:54,"Manzese, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Sanku : Morogoro,1.0
+155,2023-10-18 13:33:52,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-18 13:40:01,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Sanku : Dodoma,8.1
+156,2023-11-21 12:55:21,"Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-11-21 12:56:14,"Msasani, Kinondoni, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,1.4
+157,2023-12-14 12:04:54,"Kingo, Morogoro Urban, Morogoro, Tanzania",2023-12-14 12:09:35,"Madaraka, Boma, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+158,2023-11-22 10:14:17,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-11-22 10:27:48,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,Out of Route,PSR Mill - B,3.7
+159,2024-01-16 11:48:05,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-16 13:26:03,"Charambe, Temeke, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Sanku : Morogoro,3.8
+160,2023-10-09 12:15:36,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-09 12:28:49,"Msasani, Kinondoni, Dar es Salaam, Tanzania",T141DKS,Out of Route,Sanku : Mikocheni,0.0
+161,2023-10-18 17:31:24,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-18 19:53:50,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T191DWL,Out of Route,Sanku : Mikocheni,5.1
+162,2024-01-05 08:39:18,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2024-01-05 08:40:11,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,1.1
+163,2023-10-09 10:47:28,"Tambukareli, Dodoma Urban, Dodoma, Tanzania",2023-10-09 10:49:18,"Tambukareli, Dodoma Urban, Dodoma, Tanzania",T980DMT,Out of Route,Out of Route,0.0
+164,2023-11-14 09:32:36,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-14 09:32:46,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,1.4
+165,jr,,,,T240EBJ,Sanku : Morogoro,Sanku : Morogoro,0.0
+166,2023-11-30 07:22:04,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-30 08:29:55,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,3.0
+167,2023-11-23 11:29:58,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-23 11:30:07,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T457EBA,Out of Route,Katunzi Family,2.4
+168,2023-11-15 14:51:08,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-11-15 14:51:17,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Sanku : Dodoma,Sanku : Dodoma,0.0
+169,2023-12-07 11:31:15,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-07 11:33:00,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T452EBA,VERONICA MANDELA,Sanku : Dodoma,7.9
+170,2023-10-19 23:03:02,"Kitunda, Ilala, Dar es Salaam, Tanzania",2023-10-19 23:05:03,"Kitunda, Ilala, Dar es Salaam, Tanzania",T250EBJ,Mahanze,Out of Route,1.2
+171,2024-01-07 15:38:14,"Kunduchi, Kinondoni, Dar es Salaam, Tanzania",2024-01-07 16:04:29,"Kunduchi, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Out of Route,Sanku : Mikocheni,3.7
+172,2023-10-30 18:20:07,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-10-30 18:20:51,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,9.3
+173,2023-10-10 12:11:24,"Kizota, Dodoma Urban, Dodoma, Tanzania",2023-10-10 12:15:36,"Kizota, Dodoma Urban, Dodoma, Tanzania",T980DMT,Out of Route,Out of Route,1.1
+174,2023-11-24 13:16:25,"Kichangani, Morogoro Urban, Morogoro, Tanzania",2023-11-24 13:31:57,"Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",T457EBA,Out of Route,Out of Route,124.2
+175,2023-11-30 15:02:02,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-30 15:02:15,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Coty,17.6
+176,2023-12-06 08:11:08,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-12-06 08:52:54,"Kingo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.7
+177,2023-10-10 18:29:58,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-10-10 18:30:29,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,25.7
+178,2023-10-16 13:39:02,"Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-10-16 13:45:55,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,2.0
+179,2023-10-18 11:27:23,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-18 11:34:13,"Bagamoyo Road, Kawe, Kinondoni, Dar es Salaam, Tanzania",T191DWL,Out of Route,Out of Route,15.2
+180,2024-01-15 08:54:29,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-15 09:12:13,"Sabasaba, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Out of Route,6.2
+181,2023-11-22 17:35:01,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-22 17:35:13,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T457EBA,Out of Route,Out of Route,227.4
+182,2023-11-16 11:45:11,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-16 11:49:13,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,0.3
+183,2023-11-03 21:59:27,"Sam Nujoma Road, Ubungo, Kinondoni, Dar es Salaam, Tanzania",2023-11-03 22:29:59,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",T257DXJ,Sanku : Mikocheni,Out of Route,0.0
+184,2024-01-15 09:36:43,"Sabasaba, Morogoro Urban, Morogoro, Tanzania",2024-01-15 09:48:19,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Out of Route,1.6
+185,2023-10-11 19:29:02,"Kichangani, Morogoro Urban, Morogoro, Tanzania",2023-10-11 19:47:58,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T853DZQ,Mama Bigirwa Mill,Sanku : Mwanza,15.7
+186,2024-01-02 20:38:55,"Kitunda, Ilala, Dar es Salaam, Tanzania",2024-01-02 21:24:50,"Makangarawe, Temeke, Dar es Salaam, Tanzania",T258DXJ,S.A Mills,Muya Grain Millers,21.4
+187,2023-11-14 18:13:26,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-14 18:25:11,"Station, Kingo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,4.1
+188,2024-01-13 15:02:57,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-13 15:03:45,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,0.0
+189,2023-10-11 15:44:21,"Old Bagamoyo Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-10-11 16:41:01,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Sanku : Mikocheni,9.7
+190,2024-01-16 08:10:09,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2024-01-16 08:10:35,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Out of Route,0.0
+191,2024-01-27 09:51:39,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2024-01-27 10:16:27,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Mahanze,Out of Route,6.3
+192,2024-01-11 08:50:54,,2024-01-11 09:20:00,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,H.R.M MILLING,Out of Route,8.8
+193,2024-01-24 06:48:31,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2024-01-24 07:12:29,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+194,2023-12-15 13:57:05,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-12-15 14:23:16,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T248EBJ,Out of Route,Out of Route,0.0
+195,2023-10-05 11:15:13,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-10-05 11:26:10,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Sanku : Morogoro,Out of Route,6.9
+196,2023-11-27 15:48:22,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-11-27 15:48:58,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,Out of Route,Out of Route,4.0
+197,2023-10-25 15:41:21,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-25 16:19:21,"Azimio, Temeke, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,3.1
+198,2023-10-11 14:38:42,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-11 14:56:23,"Manzese, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Sanku : Mikocheni,Allyamin Entereprises,5.4
+199,2023-11-07 12:20:52,"Manzese, Kinondoni, Dar es Salaam, Tanzania",2023-11-07 12:32:41,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,0.0
+200,2023-12-14 16:19:36,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-14 16:30:16,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T248EBJ,Out of Route,Out of Route,4.0
+201,2023-10-09 11:20:50,"Makole, Dodoma Urban, Dodoma, Tanzania",2023-10-09 11:40:23,"Majengo, Dodoma Urban, Dodoma, Tanzania",T980DMT,Out of Route,Out of Route,20.0
+202,2024-01-20 16:55:27,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-20 16:57:06,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,3.5
+203,2024-01-22 13:36:29,"Kihonda, Morogoro Urban, Morogoro, Tanzania",2024-01-22 13:41:28,"B129, Kihonda, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Sanku : Morogoro,1.1
+204,2023-12-21 17:08:39,"Keko, Temeke, Dar es Salaam, Tanzania",2023-12-21 17:55:14,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Joyce Samuel,Out of Route,99.6
+205,2023-11-09 11:20:51,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-09 11:29:05,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Sanku : Morogoro,Sanku : Morogoro,0.0
+206,2023-10-26 09:39:52,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2023-10-26 10:01:50,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,22.3
+207,2024-01-15 17:28:59,"Sabasaba, Morogoro Urban, Morogoro, Tanzania",2024-01-15 17:33:38,"Uhuru, Mji mkuu, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+208,2023-10-02 18:54:22,"Viwandani, Dodoma Urban, Dodoma, Tanzania",2023-10-02 19:37:50,"Tambukareli, Dodoma Urban, Dodoma, Tanzania",T980DMT,Out of Route,Out of Route,133.0
+209,2024-01-15 08:48:28,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-15 08:52:55,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Sanku : Morogoro,3.2
+210,2024-01-09 18:31:49,"Manzese, Kinondoni, Dar es Salaam, Tanzania",2024-01-09 18:43:45,"Manzese, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Sanku : Morogoro,3.7
+211,2023-12-18 16:37:49,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-18 16:38:32,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,1.3
+212,2023-12-05 14:19:31,"Mazimbu, Morogoro Urban, Morogoro, Tanzania",2023-12-05 14:31:37,"Dar Es Salaam, Kilakala, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,5.3
+213,2023-11-15 10:11:33,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-15 10:15:43,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+214,2023-10-05 12:34:03,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-05 12:42:38,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Sanku : Morogoro,2.6
+215,2023-11-21 13:54:06,"Kihonda, Morogoro Urban, Morogoro, Tanzania",2023-11-21 14:07:50,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T457EBA,Out of Route,Out of Route,75.1
+216,2023-10-30 16:21:53,"B129, Kihonda, Morogoro Urban, Morogoro, Tanzania",2023-10-30 16:44:40,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T862DQM,Out of Route,Maisha,9.5
+217,2023-12-13 08:30:01,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-12-13 08:51:59,"Bigwa, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+218,2024-01-18 16:58:07,"Kunduchi, Kinondoni, Dar es Salaam, Tanzania",2024-01-18 17:15:55,"Goba, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,4.9
+219,2024-01-03 11:08:01,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-03 11:09:12,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,16.2
+220,2023-10-10 15:10:56,"Kizota, Dodoma Urban, Dodoma, Tanzania",2023-10-10 15:35:25,"Makole, Dodoma Urban, Dodoma, Tanzania",T980DMT,Out of Route,Out of Route,9.0
+221,2023-11-24 10:59:03,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-24 11:10:38,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+222,2023-11-29 15:58:40,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-29 16:21:38,"Manzese, Kinondoni, Dar es Salaam, Tanzania",MC315DKY,Mzalendo One,Out of Route,25.7
+223,2023-10-06 12:54:20,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-06 13:05:53,"Dar Es Salaam, Boma, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,2.9
+224,2023-12-28 15:17:19,"Chanika, Ilala, Dar es Salaam, Tanzania",2023-12-28 15:17:33,"Chanika, Ilala, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,2.8
+225,2023-11-21 15:27:12,"Old Morogoro, Kilakala, Morogoro Urban, Morogoro, Tanzania",2023-11-21 15:44:25,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.1
+226,2023-10-06 09:02:41,"Kitunda, Ilala, Dar es Salaam, Tanzania",2023-10-06 09:03:44,"Kitunda, Ilala, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,3.3
+227,2024-01-04 13:27:37,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-04 13:28:06,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,5.6
+228,2023-10-06 21:36:37,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-10-06 22:10:39,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,1.5
+229,2023-11-24 20:03:56,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-11-24 20:08:24,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,Angelisa Milling,Out of Route,17.5
+230,2023-10-18 15:34:52,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-18 16:55:31,"B127, Mvomero, Morogoro, Tanzania",T853DZQ,Out of Route,Sanku : Mwanza,2.6
+231,2023-12-04 15:40:54,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-04 15:46:30,"Sam Nujoma Road, Kijito Nyama, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,0.0
+232,2023-11-23 15:41:42,"Kimara, Kinondoni, Dar es Salaam, Tanzania",2023-11-23 16:02:51,"Kimara, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Guzuye investment,10.2
+233,2023-11-08 14:58:33,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-11-08 15:29:38,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T257DXJ,Out of Route,Out of Route,14.0
+234,2024-01-02 13:15:10,"Mbaruku Street, Gerezani, Ilala, Dar es Salaam, Tanzania",2024-01-02 13:17:19,"Mbaruku Street, Gerezani, Ilala, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Mahanze,5.3
+235,2023-12-08 10:16:46,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-08 10:42:50,"Bagamoyo Road, Kunduchi, Kinondoni, Dar es Salaam, Tanzania",MC315DKY,Sanku : Mikocheni,Sanku : Mikocheni,0.8
+236,2024-01-22 13:52:50,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-22 14:10:41,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,8.7
+237,2024-01-04 14:26:13,"Manzese, Kinondoni, Dar es Salaam, Tanzania",2024-01-04 14:40:22,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Kababaye Sons,Out of Route,4.0
+238,2023-12-01 21:08:46,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-12-01 21:13:07,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,Out of Route,Out of Route,20.2
+239,2024-01-25 11:11:07,"Dodoma Road, Majengo, Dodoma Urban, Dodoma, Tanzania",2024-01-25 11:11:10,"Dodoma Road, Majengo, Dodoma Urban, Dodoma, Tanzania",T141DKS,Out of Route,Out of Route,0.0
+240,2024-01-31 08:10:50,"Sultan Area, Morogoro Urban, Morogoro, Tanzania",2024-01-31 08:14:54,"Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+241,2023-11-22 17:37:42,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-22 17:50:45,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T457EBA,Out of Route,Out of Route,5.6
+242,2023-10-06 08:33:55,"A7, Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-06 08:34:12,"A7, Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,6.9
+243,2023-10-24 08:14:25,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-24 08:25:23,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Sanku : Dodoma,83.1
+244,2023-11-06 14:02:34,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-06 14:18:23,"Manzese, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,0.0
+245,2023-11-27 14:40:15,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-11-27 14:40:26,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T457EBA,Out of Route,Sanku : Mwanza,0.4
+246,2023-10-30 06:41:39,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-10-30 09:32:28,"Mkuranga, Pwani, Tanzania",DFP8546,Out of Route,Out of Route,0.0
+247,2023-12-18 15:47:07,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-12-18 16:42:24,"Kitunda, Ilala, Dar es Salaam, Tanzania",T248EBJ,Out of Route,Out of Route,13.5
+248,2023-12-01 23:27:50,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-12-01 23:36:19,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,0.2
+249,2023-10-04 15:27:29,"Kizota, Dodoma Urban, Dodoma, Tanzania",2023-10-04 15:34:14,"Kizota, Dodoma Urban, Dodoma, Tanzania",T980DMT,Out of Route,Out of Route,2.9
+250,2023-10-18 11:40:42,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-18 11:42:46,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Mahanze,8.9
+251,2023-12-19 14:00:34,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-12-19 14:00:43,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",MC473DKX,Out of Route,Out of Route,0.0
+252,2023-11-16 08:54:46,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-11-16 09:00:54,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+253,2023-10-12 12:15:53,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2023-10-12 12:28:50,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T141DKS,Sanku : Mikocheni,Out of Route,0.0
+254,2023-11-30 15:18:48,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-11-30 15:26:45,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,1.2
+255,2023-10-24 12:28:47,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-24 13:12:58,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,1.6
+256,2024-01-03 18:50:08,"Sam Nujoma Road, Ubungo, Kinondoni, Dar es Salaam, Tanzania",2024-01-03 19:17:12,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,2.5
+257,2024-01-02 14:45:44,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-02 14:49:39,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,Isanga,Sanku : Mikocheni,5.7
+258,2024-01-29 14:15:48,"Sinza, Kinondoni, Dar es Salaam, Tanzania",2024-01-29 14:32:45,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Mdee A,2.5
+259,2023-11-02 13:41:09,"Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",2023-11-02 13:44:34,"Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",T862DQM,Out of Route,Out of Route,9.1
+260,2023-11-29 16:25:40,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-29 16:52:53,"Kihonda, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,18.3
+261,2023-12-08 11:57:12,"Dar Es Salaam, Kilakala, Morogoro Urban, Morogoro, Tanzania",2023-12-08 12:06:48,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+262,2023-11-08 14:36:47,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-11-08 14:37:19,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T257DXJ,Out of Route,Out of Route,13.6
+263,2023-11-22 17:43:08,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-11-22 17:45:41,"Kingo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.1
+264,2023-10-12 15:41:41,"Bunju, Kinondoni, Dar es Salaam, Tanzania",2023-10-12 16:47:02,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,0.0
+265,2023-11-17 13:17:07,"Kihonda, Morogoro Urban, Morogoro, Tanzania",2023-11-17 13:46:16,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,0.1
+266,2023-11-07 12:34:25,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-07 13:03:16,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,4.7
+267,2023-12-14 07:53:24,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-12-14 07:53:33,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",T452EBA,Out of Route,Out of Route,0.0
+268,2023-10-05 11:30:36,"Kingo, Morogoro Urban, Morogoro, Tanzania",2023-10-05 11:31:32,"Kingo, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Out of Route,3.5
+269,2023-11-16 19:28:00,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-11-16 19:30:37,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",T257DXJ,Out of Route,Out of Route,53.4
+270,2023-10-05 22:13:04,"Madaraka, Mji mkuu, Morogoro Urban, Morogoro, Tanzania",2023-10-05 22:15:10,"Kingo, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,8.1
+271,2023-11-21 14:07:50,"Manzese, Kinondoni, Dar es Salaam, Tanzania",2023-11-21 14:33:42,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,4.0
+272,2024-01-16 15:50:19,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-16 16:09:49,"Manzese, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Out of Route,Out of Route,0.0
+273,2023-11-03 16:35:47,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-03 16:40:44,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,MAWAKI,38.0
+274,,,,,DFP8546,Out of Route,Out of Route,0.6
+275,2024-01-20 19:10:13,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2024-01-20 19:16:32,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Sanku : Mikocheni,Sanku : Mikocheni,41.8
+276,2023-10-05 15:21:30,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-05 15:27:11,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Sanku : Dodoma,Out of Route,5.3
+277,2024-01-04 10:43:46,"Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",2024-01-04 10:43:55,"Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",T850DZQ,Lugome 2,Muya Grain Millers,4.4
+278,2024-01-15 15:03:38,"Msongola, Ilala, Dar es Salaam, Tanzania",2024-01-15 16:11:35,"Narungumbe Street, Mchikichini, Ilala, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,2.6
+279,2023-11-27 14:00:31,"Msongola, Ilala, Dar es Salaam, Tanzania",2023-11-27 14:28:54,"Kitunda, Ilala, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+280,2023-11-21 14:32:52,"Kilakala, Morogoro Urban, Morogoro, Tanzania",2023-11-21 14:38:09,"Dar Es Salaam, Kilakala, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+281,2023-12-28 17:47:37,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-28 18:12:11,"Mzimuni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,14.6
+282,2024-01-04 17:15:40,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-04 17:46:46,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,3.6
+283,2023-12-04 10:45:07,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-04 10:45:21,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,0.0
+284,2024-01-24 15:14:39,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2024-01-24 15:49:55,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+285,2023-11-06 21:54:02,"Makangarawe, Temeke, Dar es Salaam, Tanzania",2023-11-06 21:58:37,"Makangarawe, Temeke, Dar es Salaam, Tanzania",T257DXJ,Out of Route,Out of Route,0.6
+286,2023-12-01 13:46:41,"Uwanja wa ndege, Morogoro Urban, Morogoro, Tanzania",2023-12-01 13:49:09,"Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+287,2023-10-03 10:06:16,"Tambukareli, Dodoma Urban, Dodoma, Tanzania",2023-10-03 10:17:10,"Tambukareli, Dodoma Urban, Dodoma, Tanzania",T980DMT,Out of Route,Out of Route,5.0
+288,2023-11-27 08:10:09,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-11-27 08:13:47,"Kimweri Avenue, Msasani, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Ask milling,Sanku : Mikocheni,30.2
+289,2023-12-22 08:50:44,"Uhuru, Mji mkuu, Morogoro Urban, Morogoro, Tanzania",2023-12-22 08:59:45,"Uwanja wa ndege, Morogoro Urban, Morogoro, Tanzania",MC473DKX,Out of Route,Sanku : Mikocheni,1.1
+290,2024-01-12 14:43:11,"Manzese, Kinondoni, Dar es Salaam, Tanzania",2024-01-12 15:05:44,"Sam Nujoma Road, Kawe, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Sanku : Mikocheni,Kelu Grain Miller,21.9
+291,2023-10-20 20:10:19,"Bunju, Kinondoni, Dar es Salaam, Tanzania",2023-10-20 21:09:11,"Kawe, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Mbuji,Sanku : Morogoro,2.7
+292,2023-11-14 13:42:35,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-11-14 13:52:19,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Sanku : Dodoma,Out of Route,1.7
+293,2024-01-12 14:00:16,"Sinza, Kinondoni, Dar es Salaam, Tanzania",2024-01-12 14:13:25,"Manzese, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Out of Route,Wamachele,3.5
+294,2023-12-29 22:29:07,"Makangarawe, Temeke, Dar es Salaam, Tanzania",2023-12-29 22:33:59,"Makangarawe, Temeke, Dar es Salaam, Tanzania",T258DXJ,Out of Route,Out of Route,0.4
+295,2023-10-03 16:15:32,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-03 16:22:30,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,0.3
+296,2024-01-08 07:18:13,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2024-01-08 08:05:15,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,0.0
+297,2023-10-16 19:40:17,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2023-10-16 19:57:44,"Kawe, Kinondoni, Dar es Salaam, Tanzania",T934DMX,KESHI 1 GROUP MILING MACHINE,KESHI 1 GROUP MILING MACHINE,0.0
+298,2023-12-15 14:14:12,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-15 16:09:38,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",MC315DKY,Out of Route,Out of Route,2.4
+299,2024-01-04 18:07:08,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-04 18:34:39,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,0.0
+300,2023-10-25 15:31:24,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-25 15:36:18,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Sanku : Dodoma,0.5
+301,2023-12-03 17:15:44,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-12-03 18:37:19,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",MC315DKY,Sanku : Mikocheni,Sanku : Mikocheni,9.5
+302,2023-11-08 11:04:11,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-08 11:05:20,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,0.6
+303,2023-11-30 09:21:43,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-30 09:40:30,"Msasani, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,0.8
+304,2023-11-08 11:08:13,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-08 11:38:30,"Bagamoyo Road, Mwananyamala, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,1.9
+305,2023-12-05 07:44:05,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-12-05 08:15:45,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T457EBA,Rudo Maize,Out of Route,1.2
+306,2023-12-09 09:06:05,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-09 09:09:14,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T452EBA,Out of Route,Out of Route,10.9
+307,2024-01-31 12:53:23,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2024-01-31 13:10:53,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T141DKS,Out of Route,Out of Route,0.2
+308,2023-11-03 20:09:13,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-03 20:09:29,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T257DXJ,Out of Route,Out of Route,13.9
+309,2023-11-27 18:13:13,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-27 18:15:46,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,12.2
+310,2024-01-16 11:40:44,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-16 11:42:46,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Out of Route,Out of Route,9.3
+311,2023-11-21 17:47:37,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-21 18:27:37,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T457EBA,Out of Route,Kirumi Milling,210.6
+312,2023-11-23 23:42:18,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-11-24 00:22:39,"Nyerere Road, Kipawa, Ilala, Dar es Salaam, Tanzania",MC315DKY,Sanku : Mikocheni,Sanku : Mikocheni,45.0
+313,2024-01-19 13:01:48,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2024-01-19 13:31:51,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T452EBA,Out of Route,Out of Route,0.0
+314,2024-01-25 12:53:43,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-25 12:54:41,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,2.3
+315,2024-01-12 14:09:56,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-12 14:20:18,"Main, Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,1.2
+316,2023-11-28 16:20:26,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-11-28 16:25:48,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+317,2023-10-04 18:01:28,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-10-04 18:37:30,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,0.0
+318,2023-11-16 19:14:25,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-11-16 19:15:49,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",T257DXJ,MGO Milling,Kilua Milling,2.7
+319,2024-01-19 17:27:19,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2024-01-19 18:09:29,"Lumumba Street, Kariakoo, Ilala, Dar es Salaam, Tanzania",MC473DKX,Out of Route,Out of Route,7.3
+320,2023-10-19 16:06:02,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-19 16:54:10,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Sanku : Dodoma,Out of Route,33.1
+321,2023-11-24 12:06:45,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-24 12:09:17,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,PSR Mill - B,Out of Route,13.8
+322,2023-12-26 19:00:11,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-12-26 19:29:23,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T850DZQ,Sanku : Mikocheni,Sanku : Mikocheni,0.0
+323,2023-10-30 17:40:29,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-30 17:41:41,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,7.9
+324,2023-11-28 12:22:07,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-11-28 12:25:52,"Kingo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,4.5
+325,2023-12-18 19:48:55,"Kijito Nyama, Kinondoni, Dar es Salaam, Tanzania",2023-12-18 20:07:12,"Kijito Nyama, Kinondoni, Dar es Salaam, Tanzania",T452EBA,Out of Route,Out of Route,2.2
+326,2023-10-11 16:08:22,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-11 16:12:37,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T853DZQ,Out of Route,Out of Route,15.8
+327,2023-11-30 12:43:17,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-30 13:15:54,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,2.1
+328,2023-11-08 13:11:45,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-08 13:52:44,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,Ng'owo,Out of Route,0.6
+329,2024-01-11 17:41:16,"Sinza, Kinondoni, Dar es Salaam, Tanzania",2024-01-11 18:03:31,"Rashidi Kawawa Street, Mwananyamala, Kinondoni, Dar es Salaam, Tanz",MC473DKX,Out of Route,Sanku : Mikocheni,9.0
+330,2023-11-02 20:35:56,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-11-02 20:50:21,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T862DQM,Out of Route,Out of Route,14.0
+331,2023-11-04 10:53:44,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-11-04 12:09:46,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,22.4
+332,2023-10-17 13:50:33,"Kingo, Morogoro Urban, Morogoro, Tanzania",2023-10-17 13:51:43,"Kingo, Morogoro Urban, Morogoro, Tanzania",T853DZQ,Pilly Posho Mill,Out of Route,0.4
+333,2023-12-08 14:51:42,"Kijito Nyama, Kinondoni, Dar es Salaam, Tanzania",2023-12-08 14:57:11,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,13.0
+334,2023-12-13 07:26:21,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-13 08:22:03,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,2.2
+335,2023-11-28 12:59:20,"Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",2023-11-28 13:08:34,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.4
+336,2024-01-03 12:06:07,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-03 12:11:16,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,Out of Route,Out of Route,22.4
+337,2024-01-26 16:28:37,"Old Bagamoyo Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2024-01-26 16:32:33,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,10.4
+338,2024-01-16 13:06:57,"Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",2024-01-16 13:19:26,"Main, Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Out of Route,0.3
+339,2023-10-25 08:49:42,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-25 08:50:53,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Sanku : Dodoma,11.6
+340,2023-10-24 11:50:10,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-24 11:52:41,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,0.0
+341,2024-01-17 12:02:14,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-17 12:03:32,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Out of Route,0.0
+342,2023-12-04 18:53:54,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-12-04 19:05:27,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,Nguju C,Out of Route,26.7
+343,2023-11-14 19:21:24,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-14 19:21:56,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T257DXJ,Out of Route,Ivan Investment Company,9.5
+344,2024-01-12 12:25:48,"Sinza, Kinondoni, Dar es Salaam, Tanzania",2024-01-12 12:30:36,"Sinza, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Naima Mills,PSR Mill - J,19.2
+345,2024-01-25 16:36:41,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-25 18:06:22,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Sanku : Dodoma,Out of Route,9.2
+346,2023-11-24 21:41:34,"Tumbi, Kibaha, Pwani, Tanzania",2023-11-24 22:57:53,"Makangarawe, Temeke, Dar es Salaam, Tanzania",T258DXJ,Out of Route,Sanku : Mikocheni,22.4
+347,2023-12-01 10:31:59,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-01 10:36:28,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,0.0
+348,2023-10-17 12:58:22,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-10-17 13:17:16,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,0.0
+349,2023-10-16 19:59:53,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2023-10-16 20:00:41,"Kawe, Kinondoni, Dar es Salaam, Tanzania",T934DMX,KESHI 1 GROUP MILING MACHINE,Out of Route,0.9
+350,2024-01-16 17:43:11,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-16 17:45:28,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Lina,Out of Route,37.4
+351,2023-11-09 11:57:44,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-11-09 11:59:36,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,0.1
+352,2023-11-29 12:57:48,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-29 13:22:19,"Kongo Street, Gerezani, Ilala, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,0.0
+353,2024-01-12 14:26:29,"Sinza, Kinondoni, Dar es Salaam, Tanzania",2024-01-12 14:32:27,"Kijito Nyama, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,0.0
+354,2023-11-30 15:35:13,"Kitunda, Ilala, Dar es Salaam, Tanzania",2023-11-30 15:41:30,"Kitunda, Ilala, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+355,2023-10-31 08:57:37,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-10-31 09:19:36,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T862DQM,Out of Route,Out of Route,11.3
+356,2023-11-01 11:45:06,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-01 11:56:34,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,2.6
+357,2023-10-27 12:15:13,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-27 12:16:04,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,4.9
+358,2023-12-15 20:26:15,"Kunduchi, Kinondoni, Dar es Salaam, Tanzania",2023-12-15 20:35:53,"Goba, Kinondoni, Dar es Salaam, Tanzania",T248EBJ,Out of Route,Out of Route,13.7
+359,2024-01-12 12:14:41,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-12 12:16:57,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.7
+360,2023-10-04 10:48:57,"Morogoro Road, Ubungo, Kinondoni, Dar es Salaam, Tanzania",2023-10-04 11:02:01,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,TAUSI MILL,Out of Route,0.7
+361,2023-11-26 16:17:44,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-26 16:24:12,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,21.2
+362,2023-10-18 14:43:03,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-18 14:44:15,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,NGOSHAH FOOD COMPANY,Out of Route,4.0
+363,2023-12-31 16:27:16,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-12-31 16:29:37,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",T850DZQ,PSR Mill - C,Umoja Maize Flour Mills,7.3
+364,2024-01-06 13:30:03,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-06 13:59:58,"Tandale, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,0.0
+365,2023-12-01 14:52:38,"Azimio, Temeke, Dar es Salaam, Tanzania",2023-12-01 15:01:36,"Yombo Vituka, Temeke, Dar es Salaam, Tanzania",T240EBJ,Senzige milling,Kanaani,1.5
+366,2023-10-29 21:09:10,"Kichangani, Morogoro Urban, Morogoro, Tanzania",2023-10-29 21:30:21,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T862DQM,Out of Route,Out of Route,0.0
+367,2023-12-04 13:15:00,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-04 13:25:29,"Bagamoyo Road, Kawe, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,0.2
+368,2024-01-15 18:42:49,"Msasani, Kinondoni, Dar es Salaam, Tanzania",2024-01-15 19:53:54,"Kawe, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,0.0
+369,2023-10-05 15:01:56,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-05 15:07:12,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,0.7
+370,2023-11-07 15:16:05,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-11-07 15:16:15,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T257DXJ,Out of Route,Sanku : Mikocheni,46.7
+371,2024-01-22 06:49:00,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2024-01-22 07:12:03,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+372,2023-10-13 19:26:26,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-10-13 19:57:31,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T191DWL,Out of Route,Out of Route,0.0
+373,2024-01-03 19:43:30,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",2024-01-03 20:40:22,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,Out of Route,Sanku : Mikocheni,0.0
+374,2024-01-18 15:42:20,"Kijito Nyama, Kinondoni, Dar es Salaam, Tanzania",2024-01-18 16:47:18,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",T452EBA,Out of Route,Out of Route,1.7
+375,2023-12-15 10:13:29,"Old Bagamoyo Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-12-15 10:18:01,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,0.0
+376,2023-10-10 13:24:09,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-10 13:56:52,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,10.0
+377,2023-11-20 19:40:12,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-11-20 19:40:34,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+378,2023-11-06 14:44:38,"Mazimbu, Morogoro Urban, Morogoro, Tanzania",2023-11-06 14:45:48,"Mazimbu, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,1.2
+379,2023-12-29 15:50:21,"Chanika, Ilala, Dar es Salaam, Tanzania",2023-12-29 16:16:30,"Msongola, Ilala, Dar es Salaam, Tanzania",T258DXJ,Sanku : Mikocheni,Out of Route,0.5
+380,2023-10-06 10:15:48,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-06 10:19:07,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Kivumbe Mills,1.9
+381,2024-01-12 14:43:02,"Kingo, Morogoro Urban, Morogoro, Tanzania",2024-01-12 14:48:47,"Kichangani, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+382,2024-01-26 12:20:21,"Sabasaba, Morogoro Urban, Morogoro, Tanzania",2024-01-26 12:33:18,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Sanku : Morogoro,Out of Route,0.0
+383,2023-10-11 15:35:57,"Msongola, Ilala, Dar es Salaam, Tanzania",2023-10-11 15:36:50,"Msongola, Ilala, Dar es Salaam, Tanzania",T250EBJ,Out of Route,MTENDENI MASHINE,3.7
+384,2024-01-26 19:17:03,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-26 19:59:20,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,7.4
+385,2023-12-11 14:07:46,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-11 14:08:16,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,9.4
+386,2023-11-10 14:27:46,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-10 14:28:30,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,7.0
+387,2024-01-29 17:23:21,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-29 17:28:30,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+388,2023-10-30 17:23:51,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-10-30 17:47:20,"Boma, Morogoro Urban, Morogoro, Tanzania",T862DQM,Out of Route,Out of Route,3.1
+389,2023-11-22 14:09:38,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-22 14:10:44,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T457EBA,Out of Route,Sanku : Mwanza,2.5
+390,2023-11-03 08:28:05,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-03 08:28:15,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Takadiri,Sanku : Dodoma,2.8
+391,2024-01-27 14:27:58,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-27 14:29:34,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,0.0
+392,2023-12-06 11:36:57,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-12-06 11:39:22,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T452EBA,Out of Route,Sanku : Dodoma,0.5
+393,2023-11-15 17:45:44,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-11-15 18:47:25,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T257DXJ,Sanku : Mikocheni,Sanku : Mikocheni,0.0
+394,2023-12-20 20:27:23,"B127, Magole, Kilosa, Morogoro, Tanzania",2023-12-20 20:34:31,"B129, Dumila, Kilosa, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+395,2024-01-09 14:32:59,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",2024-01-09 14:33:18,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,8.0
+396,2023-12-04 14:19:53,"Mbaruku Street, Gerezani, Ilala, Dar es Salaam, Tanzania",2023-12-04 14:45:55,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,15.5
+397,2023-10-27 15:44:12,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-27 16:19:52,"Manzese, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Out of Route,MASAGAJA MILL,2.1
+398,2023-12-02 13:48:17,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-02 13:50:12,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,0.0
+399,2024-01-25 04:03:19,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2024-01-25 04:12:47,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T141DKS,Out of Route,Out of Route,0.0
+400,2023-12-12 20:42:21,"Kichangani, Morogoro Urban, Morogoro, Tanzania",2023-12-12 20:55:19,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+401,2023-12-27 14:11:52,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-27 14:14:04,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,Africa One Mill -B,Out of Route,1.3
+402,2023-11-09 12:56:10,"Kihonda, Morogoro Urban, Morogoro, Tanzania",2023-11-09 13:07:44,"Kihonda, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Sanku : Dodoma,4.3
+403,2024-01-11 14:27:23,"Kijito Nyama, Kinondoni, Dar es Salaam, Tanzania",2024-01-11 14:54:47,"Kimara, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Isanga,Out of Route,4.1
+404,2024-01-17 19:22:43,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2024-01-17 19:29:02,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Sanku : Mikocheni,Isanga,5.1
+405,2023-12-01 15:10:18,"Kihonda, Morogoro Urban, Morogoro, Tanzania",2023-12-01 15:10:29,"Kihonda, Morogoro Urban, Morogoro, Tanzania",T457EBA,Mujalya Mini Miller,Mama Happy,0.6
+406,2024-01-17 10:35:03,"Kilakala, Morogoro Urban, Morogoro, Tanzania",2024-01-17 10:40:33,"Kilakala, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+407,2023-10-11 14:34:24,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",2023-10-11 14:39:38,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",T141DKS,PSR Mill - A,Out of Route,23.5
+408,2023-10-17 11:08:46,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-17 11:45:55,"Sandali, Temeke, Dar es Salaam, Tanzania",T191DWL,Out of Route,Out of Route,18.0
+409,2023-10-25 09:24:32,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-10-25 09:41:11,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Sanku : Mikocheni,5.2
+410,2023-12-28 16:26:22,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-28 16:52:53,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,Out of Route,Out of Route,0.0
+411,2023-11-23 13:12:59,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-11-23 13:16:10,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,1.0
+412,2024-01-05 14:12:43,"Yombo Vituka, Temeke, Dar es Salaam, Tanzania",2024-01-05 14:14:48,"Yombo Vituka, Temeke, Dar es Salaam, Tanzania",MC473DKX,Out of Route,Out of Route,0.0
+413,2023-11-24 00:41:37,"Nyerere Road, Kipawa, Ilala, Dar es Salaam, Tanzania",2023-11-24 01:05:17,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",MC315DKY,Out of Route,Sanku : Mikocheni,1.9
+414,2023-10-27 11:40:16,"Mji mkuu, Morogoro Urban, Morogoro, Tanzania",2023-10-27 11:49:44,"Kilakala, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Sanku : Dodoma,6.6
+415,2023-12-21 18:16:13,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-12-21 18:17:06,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T850DZQ,Out of Route,Out of Route,6.7
+416,2023-11-13 16:31:13,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",2023-11-13 16:44:33,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T257DXJ,Out of Route,Out of Route,0.3
+417,2023-11-10 10:14:17,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-11-10 11:07:30,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Sanku : Mikocheni,6.0
+418,2024-01-15 09:48:53,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-15 09:50:54,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Out of Route,Out of Route,2.1
+419,2023-11-21 07:37:44,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-11-21 08:07:30,"Somanga Street, Magomeni, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,2.8
+420,2024-01-15 16:21:24,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2024-01-15 17:12:06,"Msasani, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,0.0
+421,2023-12-06 18:12:55,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-12-06 18:13:22,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T452EBA,Out of Route,Out of Route,5.7
+422,2023-11-27 19:59:09,"Station, Kingo, Morogoro Urban, Morogoro, Tanzania",2023-11-27 20:21:31,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+423,2023-12-14 18:46:17,"Bagamoyo Road, Kawe, Kinondoni, Dar es Salaam, Tanzania",2023-12-14 18:54:08,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T248EBJ,Out of Route,Out of Route,0.0
+424,2023-10-04 13:14:26,"Mvomero, Morogoro, Tanzania",2023-10-04 13:17:57,"Mvomero, Morogoro, Tanzania",T852DZQ,Out of Route,Out of Route,1.6
+425,2023-12-07 17:59:36,"Kichangani, Morogoro Urban, Morogoro, Tanzania",2023-12-07 18:08:36,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.5
+426,2023-12-11 13:20:56,"Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-12-11 13:27:22,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,7.4
+427,2024-01-09 12:05:06,"Nyerere Road, Chang'ombe, Temeke, Dar es Salaam, Tanzania",2024-01-09 12:05:17,"Nyerere Road, Chang'ombe, Temeke, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,1.6
+428,2023-12-31 19:55:13,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-12-31 20:03:12,"Kichangani, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,2.0
+429,2023-10-28 08:34:56,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-10-28 08:53:36,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T862DQM,Out of Route,Out of Route,0.5
+430,2023-12-06 13:45:48,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-06 15:39:52,"Tambani, Mkuranga, Pwani, Tanzania",T240EBJ,Sanku : Morogoro,Out of Route,2.4
+431,2024-01-08 14:37:49,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-08 14:48:17,"Kingo, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,0.4
+432,2024-01-25 17:30:41,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2024-01-25 17:40:26,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Sanku : Morogoro,Out of Route,2.8
+433,2024-01-07 16:09:25,"Kunduchi, Kinondoni, Dar es Salaam, Tanzania",2024-01-07 17:16:54,"Ilala, Dar es Salaam, Tanzania",MC473DKX,Out of Route,S Mkilindi,29.1
+434,2023-11-22 16:53:37,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",2023-11-22 17:03:52,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T457EBA,Out of Route,Out of Route,3.7
+435,2023-10-31 18:44:10,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2023-10-31 19:02:28,"Kawe, Kinondoni, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,0.0
+436,2024-01-06 13:33:30,"Kitunda, Ilala, Dar es Salaam, Tanzania",2024-01-06 14:36:29,"Yombo Vituka, Temeke, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,6.8
+437,2023-11-29 17:15:31,"B129, Kihonda, Morogoro Urban, Morogoro, Tanzania",2023-11-29 17:40:25,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,9.7
+438,2024-01-13 15:51:11,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-13 15:52:12,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,0.0
+439,2024-01-05 23:01:07,"Makangarawe, Temeke, Dar es Salaam, Tanzania",2024-01-05 23:09:19,"Makangarawe, Temeke, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,17.6
+440,2023-11-14 14:27:17,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-11-14 14:34:34,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,5.2
+441,2023-12-14 09:42:53,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2023-12-14 09:52:49,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",T452EBA,Out of Route,Out of Route,1.4
+442,2023-11-23 18:01:48,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-23 18:18:13,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",T863DQM,Akiaki Ltd,Out of Route,9.0
+443,2024-01-09 18:48:27,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-09 18:49:24,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Mama Mcharo Milling - B,6.3
+444,2023-10-14 05:55:57,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-10-14 06:48:02,"Bridge Street, Kivukoni, Ilala, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,12.2
+445,2023-12-09 13:56:32,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-09 15:13:46,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",MC315DKY,Isanga,Out of Route,0.7
+446,2023-11-28 18:31:54,"Segerea, Ilala, Dar es Salaam, Tanzania",2023-11-28 18:46:51,"Kinyerezi, Ilala, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,0.0
+447,2023-11-07 14:37:16,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-11-07 15:01:30,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,6.0
+448,2024-01-21 11:49:20,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2024-01-21 12:46:22,"Kunduchi, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Out of Route,Out of Route,0.1
+449,2023-11-21 17:47:17,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-11-21 18:00:53,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Goldenpot Millers,Out of Route,5.2
+450,2023-11-02 10:24:53,"Yombo Vituka, Temeke, Dar es Salaam, Tanzania",2023-11-02 10:26:41,"Yombo Vituka, Temeke, Dar es Salaam, Tanzania",T250EBJ,Out of Route,Out of Route,2.8
+451,2023-12-16 10:20:16,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-12-16 10:20:34,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T850DZQ,Sanku : Mikocheni,Out of Route,29.0
+452,2023-10-27 21:12:24,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",2023-10-27 21:12:50,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",DFP8546,Out of Route,Out of Route,8.7
+453,2023-12-16 10:33:49,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2023-12-16 10:52:46,"Bagamoyo Road, Kijito Nyama, Kinondoni, Dar es Salaam, Tanzania",T248EBJ,Out of Route,Out of Route,6.8
+454,2023-12-20 21:34:06,"Kitunda, Ilala, Dar es Salaam, Tanzania",2023-12-20 22:03:25,"Kitunda, Ilala, Dar es Salaam, Tanzania",T980DMT,Out of Route,Out of Route,0.0
+455,2023-12-01 12:33:20,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-12-01 13:05:19,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,Out of Route,18.7
+456,2023-12-20 14:15:51,"B127, Diongoya, Mvomero, Morogoro, Tanzania",2023-12-20 14:21:41,"B127, Diongoya, Mvomero, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.0
+457,2023-11-15 12:14:36,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-15 12:24:57,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,4.4
+458,2024-01-10 18:21:28,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2024-01-10 18:21:44,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Sanku : Morogoro,Out of Route,3.2
+459,2023-10-07 14:46:16,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",2023-10-07 15:09:57,"Kawe, Kinondoni, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,2.7
+460,2024-01-09 19:04:47,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2024-01-09 19:31:49,"Kawe, Kinondoni, Dar es Salaam, Tanzania",T452EBA,Out of Route,Out of Route,0.0
+461,2023-12-14 09:22:05,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-12-14 09:22:31,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T850DZQ,Out of Route,Out of Route,6.2
+462,2023-12-04 12:33:54,"Kihonda, Morogoro Urban, Morogoro, Tanzania",2023-12-04 12:35:11,"Kihonda, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,1.6
+463,2024-01-11 14:58:53,"Kimara, Kinondoni, Dar es Salaam, Tanzania",2024-01-11 15:13:20,"Sinza, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Out of Route,Sanku : Mikocheni,3.2
+464,2024-01-02 15:05:49,"Kaole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",2024-01-02 15:15:51,"Msasani, Kinondoni, Dar es Salaam, Tanzania",T980DMT,Katemi Food,Katemi Food,0.0
+465,2023-11-30 10:36:44,"Kitunda, Ilala, Dar es Salaam, Tanzania",2023-11-30 10:39:53,"Kitunda, Ilala, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,0.7
+466,2023-10-13 12:37:21,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-13 12:57:38,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T853DZQ,Out of Route,Out of Route,0.0
+467,2023-10-08 07:55:03,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",2023-10-08 07:59:59,"A7, Kingolwira, Morogoro Urban, Morogoro, Tanzania",T853DZQ,Chars Posho,Sanku : Mwanza,14.7
+468,2023-10-06 20:38:03,"Pugu Road, Kipawa, Ilala, Dar es Salaam, Tanzania",2023-10-06 21:17:11,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T141DKS,Out of Route,Out of Route,9.8
+469,2023-11-09 14:11:26,"Kihonda, Morogoro Urban, Morogoro, Tanzania",2023-11-09 14:33:09,"Mji mpya, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,7.6
+470,2023-10-03 16:49:38,"Hazina, Dodoma Urban, Dodoma, Tanzania",2023-10-03 17:45:35,"Kizota, Dodoma Urban, Dodoma, Tanzania",T980DMT,Out of Route,Out of Route,0.0
+471,2024-01-30 15:04:02,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-30 15:16:26,"Mwindu Lane, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Mashine ya Maji,10.5
+472,2023-10-05 12:02:43,"Kichangani, Morogoro Urban, Morogoro, Tanzania",2023-10-05 12:03:04,"Kichangani, Morogoro Urban, Morogoro, Tanzania",T934DMX,Out of Route,Out of Route,11.8
+473,2023-10-25 06:50:03,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2023-10-25 07:32:11,"Chole Road, Msasani, Kinondoni, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,5.6
+474,2023-12-15 17:22:53,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-12-15 18:26:48,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,0.8
+475,2023-12-14 16:56:45,"A7, Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-12-14 20:13:52,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",MC315DKY,Mshauri Milling,Out of Route,0.2
+476,2023-12-08 11:45:30,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-12-08 11:46:22,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T850DZQ,Sanku : Mikocheni,Out of Route,3.7
+477,2023-11-30 19:38:37,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-30 19:39:29,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Sanku : Morogoro,2.6
+478,2023-11-27 11:02:04,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-27 13:12:31,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Sanku : Morogoro,3.4
+479,2023-12-05 07:14:20,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-05 07:46:56,"Magore Street, Upanga Mashariki, Ilala, Dar es Salaam, Tanzania",T452EBA,Sanku : Dodoma,MPWAPWA GROUP,7.8
+480,2023-11-08 08:47:39,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-11-08 08:48:38,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,5.6
+481,2023-11-27 21:16:07,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2023-11-27 21:35:39,"Makuburi, Kinondoni, Dar es Salaam, Tanzania",T261DXJ,Out of Route,PSR Mill - A,13.2
+482,2023-11-27 12:38:13,"Kichangani, Morogoro Urban, Morogoro, Tanzania",2023-11-27 12:38:56,"Kichangani, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,5.6
+483,2024-01-16 12:15:49,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",2024-01-16 12:33:23,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Sanku : Mikocheni,Sanku : Mikocheni,0.0
+484,2023-12-12 15:03:22,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-12-12 15:03:46,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",MC315DKY,Out of Route,Out of Route,2.0
+485,2023-12-13 09:47:19,"Uwanja wa ndege, Morogoro Urban, Morogoro, Tanzania",2023-12-13 09:52:31,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T863DQM,Out of Route,Out of Route,3.8
+486,2023-10-27 11:51:55,"Kilakala, Morogoro Urban, Morogoro, Tanzania",2023-10-27 11:56:55,"Kilakala, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Out of Route,Out of Route,3.8
+487,2023-10-19 15:13:37,"Manzese, Kinondoni, Dar es Salaam, Tanzania",2023-10-19 15:27:05,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Sanku : Morogoro,Sanku : Morogoro,0.0
+488,2023-10-07 12:41:03,"Kawe, Kinondoni, Dar es Salaam, Tanzania",2023-10-07 13:15:55,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",T934DMX,Out of Route,Out of Route,3.0
+489,2024-01-16 17:30:16,"Sabasaba, Morogoro Urban, Morogoro, Tanzania",2024-01-16 17:37:07,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T852DZQ,Sanku : Morogoro,Out of Route,3.5
+490,2023-10-25 15:19:49,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-25 15:26:02,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T453EAJ,Sanku : Dodoma,Sanku : Dodoma,0.0
+491,2023-11-30 12:33:41,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2023-11-30 12:38:51,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T240EBJ,Out of Route,Out of Route,13.3
+492,2024-01-04 16:05:15,"Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",2024-01-04 16:05:31,"Uwanja wa Taifa, Morogoro Urban, Morogoro, Tanzania",T850DZQ,S.A Mills,Out of Route,3.6
+493,2023-10-27 17:38:47,"Mbezi, Kinondoni, Dar es Salaam, Tanzania",2023-10-27 18:23:05,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T250EBJ,Sanku : Dodoma,Out of Route,15.4
+494,2024-01-03 16:35:47,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",2024-01-03 16:36:12,"Ubungo, Kinondoni, Dar es Salaam, Tanzania",T258DXJ,Sanku : Mikocheni,Africa One Mill -B,43.9
+495,2023-10-25 14:44:00,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",2023-10-25 14:47:42,"Mwembesongo, Morogoro Urban, Morogoro, Tanzania",T862DQM,Bamato,Out of Route,5.6
+496,2023-12-04 15:18:23,"Bagamoyo Road, Kawe, Kinondoni, Dar es Salaam, Tanzania",2023-12-04 15:27:24,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",T196DQG,Out of Route,Out of Route,9.3
+497,2023-10-21 10:21:05,"Kihonda, Morogoro Urban, Morogoro, Tanzania",2023-10-21 10:59:11,"Kingolwira, Morogoro Urban, Morogoro, Tanzania",T853DZQ,Out of Route,Sanku : Mwanza,2.6
+498,2023-11-13 21:44:25,"Morogoro Road, Makurumla, Kinondoni, Dar es Salaam, Tanzania",2023-11-13 21:44:37,"Morogoro Road, Makurumla, Kinondoni, Dar es Salaam, Tanzania",T257DXJ,Out of Route,Out of Route,3.1
+499,2024-01-03 15:21:43,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",2024-01-03 15:22:05,"Mikocheni, Kinondoni, Dar es Salaam, Tanzania",MC473DKX,Out of Route,Sanku : Mikocheni,0.0

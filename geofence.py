@@ -4,6 +4,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
+
+
 def plot_out_of_route(data, geofence_column):
     # Create a new column to indicate out of route events
     data['Out of Route'] = (data[geofence_column] == 'X') | (data[geofence_column] == 'Y')

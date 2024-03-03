@@ -20,7 +20,7 @@ def plot_out_of_route(data, geofence_column):
 
 def draw_network_graph(df, selected_start_location):
     # Filter the dataframe based on the selected start location
-    filtered_df = df[df['Position Description'] == selected_start_location]
+    filtered_df = df[df['Start Location'] == selected_start_location]
 
     # Limit to only 5 trips
     filtered_df = filtered_df.head(5)
@@ -30,9 +30,9 @@ def draw_network_graph(df, selected_start_location):
 
     # Add nodes and edges
     for index, row in filtered_df.iterrows():
-        G.add_node(row['Position Description'])
+        G.add_node(row['Start Location'])
         G.add_node(row['End Location'])
-        G.add_edge(row['Position Description'], row['End Location'], weight=row['Trip Distance'])
+        G.add_edge(row['Start Location'], row['End Location'], weight=row['Trip Distance'])
 
     # Draw the network graph
     fig, ax = plt.subplots()
@@ -79,7 +79,7 @@ def main():
 
     elif selected_option == "Network Graph":
         # Dropdown to select a specific start location for the network graph
-        start_location_options = df_network_graph['Position Description'].unique()
+        start_location_options = df_network_graph['Start Location'].unique()
         selected_start_location_network_graph = st.selectbox("Select Start Location", start_location_options)
 
         # Draw the network graph for the selected start location

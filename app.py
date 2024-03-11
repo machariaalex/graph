@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import networkx as nx
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 # Function to calculate the total cost on fuel
 def calculate_total_fuel_cost(distance):
     # 1 litre covers 9 km, and 1 litre is sold at 3100 TZS

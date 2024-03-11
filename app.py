@@ -119,7 +119,7 @@ def main():
     df['End Time'] = pd.to_datetime(df['End Time'])
 
     # Streamlit app title
-    st.title("Data Visualization App")
+    st.title("Graphical Network Theory: Optimizing Route Planning")
 
     # Visualization options
     visualization_options = ["Start Geofence Out of Route", "End Geofence Out of Route", "Network Graph", "Out of Route Network Diagram"]

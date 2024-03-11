@@ -1,142 +1,90 @@
 import pandas as pd
-import networkx as nx
-import matplotlib.pyplot as plt
 import seaborn as sns
+import matplotlib.pyplot as plt
 import streamlit as st
+import networkx as nx
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
-
-
-
-def plot_out_of_route(data, geofence_column):
-    # Create a new column to indicate out of route events
-    data['Out of Route'] = (data[geofence_column] == 'X') | (data[geofence_column] == 'Y')
-
-    # Plot the distribution of out of route events
-    plt.figure(figsize=(10, 6))
-    sns.countplot(x='Out of Route', data=data)
-    plt.title(f'Distribution of Out of Route Events in {geofence_column}')
-    plt.xlabel('Out of Route Event')
+def plot_null_values(data, column):
+    # Create a bar plot to visualize null values
+    plt.figure(figsize=(8, 5))
+    sns.barplot(x=data[column].isnull().value_counts().index, y=data[column].isnull().value_counts(), palette="viridis")
+    plt.title(f'Null Values in {column}')
+    plt.xlabel('Null Values')
     plt.ylabel('Count')
     st.pyplot()
 
-def draw_network_diagram(start_location, end_location, trip_distance):
+def calculate_cost_on_fuel(row):
+    # Calculate cost on fuel based on average consumption and distance
+    average_consumption_per_litre = 9  # km per litre
+    fuel_cost_per_litre = 3100  # TZS per litre
+    return round((row['Distance'] / average_consumption_per_litre) * fuel_cost_per_litre, 2)
+
+def draw_network_graph(df, selected_start_location):
+    # Filter the dataframe based on the selected start location
+    filtered_df = df[df['Start Location'] == selected_start_location]
+
+    # Limit to only 5 trips
+    filtered_df = filtered_df.head(5)
+
     # Create a directed graph
     G = nx.DiGraph()
 
     # Add nodes and edges
-    G.add_edge(start_location, end_location, weight=trip_distance)
+    for index, row in filtered_df.iterrows():
+        G.add_node(row['Start Location'])
+        G.add_node(row['End Location'])
+        G.add_edge(row['Start Location'], row['End Location'], weight=row['Distance'])
 
-    # Draw the route diagram
+    # Draw the network graph
     fig, ax = plt.subplots()
-    pos = nx.spring_layout(G)
+    pos = nx.spring_layout(G, seed=42)  # Seed for reproducibility
     labels = nx.get_edge_attributes(G, 'weight')
-    nx.draw_networkx_nodes(G, pos, node_size=700)
-    nx.draw_networkx_edges(G, pos)
+    nx.draw_networkx_nodes(G, pos, node_size=700, node_color='skyblue')
+    nx.draw_networkx_edges(G, pos, edge_color='gray', arrowsize=20)
     nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
-    nx.draw_networkx_labels(G, pos)
+    nx.draw_networkx_labels(G, pos, font_color='black')
 
     # Display the plot using Streamlit
     st.pyplot(fig)
 
-def draw_out_of_route_network_diagram(data, selected_registration, selected_index):
-    # Create a new column to indicate out of route events
-    data['Out of Route'] = (data['Start Geofence'] == 'X') | (data['End Geofence'] == 'Y')
+    # Additional information in a table below the graph
+    st.subheader("Additional Information:")
+    additional_info = {
+        "Trip Number": list(range(1, len(filtered_df) + 1)),
+        "End Location": filtered_df['End Location'].tolist(),
+        "Distance": filtered_df['Distance'].round(2).tolist(),
+        "Cost on Fuel (TZS)": filtered_df.apply(calculate_cost_on_fuel, axis=1).round(2).tolist()
+    }
+    st.table(pd.DataFrame(additional_info).round(2))
 
-    # Filter data based on selected registration number
-    filtered_data = data[data['Registration'] == selected_registration]
-
-    # Create a directed graph for out of route events
-    G = nx.DiGraph()
-
-    # Add nodes and edges for the selected row where 'Out of Route' is True
-    row = filtered_data.iloc[selected_index]
-    G.add_edge(row['Start Geofence'], row['End Geofence'], weight=row['Trip Distance'])
-
-    # Draw the geofence out of route diagram
-    fig, ax = plt.subplots()
-    pos = nx.spring_layout(G)
-    labels = nx.get_edge_attributes(G, 'weight')
-    nx.draw_networkx_nodes(G, pos, node_size=700)
-    nx.draw_networkx_edges(G, pos)
-    nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
-    nx.draw_networkx_labels(G, pos)
-
-    # Display the plot using Streamlit
-    st.pyplot(fig)
-
-    # Additional information about the selected row
-    st.write("Start Geofence:", row['Start Geofence'])
-    st.write("End Geofence:", row['End Geofence'])
-    st.write("Trip Distance:", row['Trip Distance'])
+    st.write(f"Selected Start Location: {selected_start_location}")
 
 def main():
     # Load dataset
-    df_geofence = pd.read_csv('geofence.csv')
-    
+    df = pd.read_csv('clean_trip.csv')
+
     # Streamlit app title
-    st.title("Route Planning App")
+    st.title("Data Visualization App")
 
     # Visualization options
-    visualization_options = ["Start Geofence Out of Route", "End Geofence Out of Route", "Route Diagram", "Geofence Out of Route  Diagram"]
+    visualization_options = ["Missing Values in Start Geofence", "Missing Values in End Geofence", "Network Graph"]
     selected_option = st.selectbox("Select Visualization Type", visualization_options)
 
-    if selected_option == "Start Geofence Out of Route":
-        # Visualize out of route events for Start Geofence
-        plot_out_of_route(df_geofence, "Start Geofence")
+    if selected_option == "Missing Values in Start Geofence":
+        # Plot null values for 'Start Geofence'
+        plot_null_values(df, 'Start Geofence')
 
-    elif selected_option == "End Geofence Out of Route":
-        # Visualize out of route events for End Geofence
-        plot_out_of_route(df_geofence, "End Geofence")
+    elif selected_option == "Missing Values in End Geofence":
+        # Plot null values for 'End Geofence'
+        plot_null_values(df, 'End Geofence')
 
-    elif selected_option == "Route Diagram":
-        # Filter unique registration numbers
-        registration_options = df_geofence['Registration'].unique()
+    elif selected_option == "Network Graph":
+        # Dropdown to select a specific start location
+        start_location_options = df['Start Location'].unique()
+        selected_start_location = st.selectbox("Select Start Location", start_location_options)
 
-        # Dropdown to select a specific registration number
-        selected_registration = st.selectbox("Select Registration Number", registration_options)
-
-        # Filter the dataframe based on the selected registration number
-        filtered_df = df_geofence[df_geofence['Registration'] == selected_registration]
-
-        # Check if there are rows for the selected registration
-        if not filtered_df.empty:
-            # Select a row using a slider within the filtered dataframe
-            row_index = st.slider("Select a row index", 0, len(filtered_df) - 1, 0)
-            row = filtered_df.iloc[row_index]
-
-            # Extract information
-            start_location = row['Start Location']
-            end_location = row['End Location']
-            trip_distance = row['Trip Distance']
-
-            # Draw the route diagram
-            draw_network_diagram(start_location, end_location, trip_distance)
-
-            # Additional information about the selected row
-            st.write("Start Location:", start_location)
-            st.write("End Location:", end_location)
-            st.write("Trip Distance:", trip_distance)
-        else:
-            st.warning(f"No data available for the selected registration number: {selected_registration}")
-
-    elif selected_option == "Geofence Out of Route  Diagram":
-        # Dropdown to select a specific registration number for the out of route network diagram
-        registration_options = df_geofence['Registration'].unique()
-        selected_registration_out_of_route = st.selectbox("Select Registration Number", registration_options)
-
-        # Filter the dataframe based on the selected registration number
-        filtered_df_out_of_route = df_geofence[df_geofence['Registration'] == selected_registration_out_of_route]
-
-        # Check if there are rows for the selected registration
-        if not filtered_df_out_of_route.empty:
-            # Select a row using a slider within the filtered dataframe
-            row_index_out_of_route = st.slider("Select a row index", 0, len(filtered_df_out_of_route) - 1, 0)
-
-            # Draw the geofence out of route diagram for the selected index
-            draw_out_of_route_network_diagram(filtered_df_out_of_route, selected_registration_out_of_route, row_index_out_of_route)
-        else:
-            st.warning(f"No data available for the selected registration number: {selected_registration_out_of_route}")
+        # Draw the network graph for the selected start location
+        draw_network_graph(df, selected_start_location)
 
 if __name__ == "__main__":
     main()

@@ -29,7 +29,7 @@ def plot_null_values(data, column):
     plt.ylabel('Count')
     st.pyplot()
 
-def draw_network_graph(df, selected_registration, selected_start_location):
+def draw_network_graph(df, selected_registration, selected_start_location, show_trips_per_day):
     # Filter the dataframe based on the selected registration number and start location
     filtered_df = df[(df['Registration'] == selected_registration) & (df['Start Location'] == selected_start_location)]
 
@@ -61,19 +61,25 @@ def draw_network_graph(df, selected_registration, selected_start_location):
     st.subheader(f"Registration Number: {selected_registration}")
     st.subheader(f"Start Location: {selected_start_location}")
 
-    # Table showing start time, start location, end time, end location, distance, and total cost on fuel of trips plotted on the network diagram
+    # Table showing start month, start location, end time, end location, distance, and total cost on fuel of trips plotted on the network diagram
     st.write("Trips Plotted on Network Diagram:")
     additional_info_table = filtered_df_network[['Start Time', 'End Time', 'Start Location', 'End Location', 'Distance']]
     additional_info_table['Total Cost on Fuel (TZS)'] = additional_info_table['Distance'].apply(calculate_total_fuel_cost)
+    additional_info_table['Start Month'] = additional_info_table['Start Time'].dt.month
     st.table(additional_info_table)
 
     # Total number of trips made per month for the selected registration number and start location
     total_trips_per_month = filtered_df.groupby([filtered_df['Start Time'].dt.month, 'Registration']).size().reset_index(name='Total Trips')
     total_trips_per_month['Total Cost'] = total_trips_per_month['Total Trips'] * 90000  # Assuming 1 trip costs 90000 TZS
+    total_trips_per_month = total_trips_per_month.rename(columns={'Start Time': 'Start Month'})
     st.write("Total Number of Trips per Month:")
     st.table(total_trips_per_month.head(30))  # Limiting to 30 trips
 
-def draw_out_of_route_network_graph(df, selected_registration, selected_start_location):
+    # Bar chart showing trips made per day for the selected registration number if checkbox is selected
+    if show_trips_per_day:
+        draw_trips_per_day_chart(filtered_df)
+
+def draw_out_of_route_network_graph(df, selected_registration, selected_start_location, show_trips_per_day_out_of_route):
     # Filter the dataframe for trips where both Start and End Geofence are null (Out of Route)
     out_of_route_df = df[(df['Start Geofence'].isnull()) & (df['End Geofence'].isnull()) & (df['Registration'] == selected_registration) & (df['Start Location'] == selected_start_location)]
 
@@ -93,7 +99,7 @@ def draw_out_of_route_network_graph(df, selected_registration, selected_start_lo
     fig, ax = plt.subplots()
     pos = nx.spring_layout(G, seed=42)  # Seed for reproducibility
     labels = nx.get_edge_attributes(G, 'weight')
-    nx.draw_networkx_nodes(G, pos, node_size=700, node_color='salmon')
+    nx.draw_networkx_nodes(G, pos, node_size=700, node_color='orange')  # Use orange for out of route trips
     nx.draw_networkx_edges(G, pos, edge_color='gray', arrowsize=20)
     nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
     nx.draw_networkx_labels(G, pos, font_color='black')
@@ -101,16 +107,35 @@ def draw_out_of_route_network_graph(df, selected_registration, selected_start_lo
     # Display the plot using Streamlit
     st.pyplot(fig)
 
-    # Table showing start time, start location, end time, end location, distance, and total cost on fuel of trips out of route
+    # Additional information in a table below the graph for out of route trips
+    st.subheader(f"Registration Number: {selected_registration}")
+    st.subheader(f"Start Location: {selected_start_location}")
+
+    # Table showing start month, start location, end time, end location, distance, and total cost on fuel of out of route trips
     st.write("Trips Out of Route:")
     out_of_route_table = out_of_route_df_network[['Start Time', 'End Time', 'Start Location', 'End Location', 'Distance']]
     out_of_route_table['Total Cost on Fuel (TZS)'] = out_of_route_table['Distance'].apply(calculate_total_fuel_cost)
+    out_of_route_table['Start Month'] = out_of_route_table['Start Time'].dt.month
     st.table(out_of_route_table)
 
     # Total number of trips per month that were out of route for the selected registration number and start location
     total_out_of_route_per_month = out_of_route_df.groupby([out_of_route_df['Start Time'].dt.month, 'Registration']).size().reset_index(name='Total Trips Out of Route')
+    total_out_of_route_per_month['Total Cost'] = total_out_of_route_per_month['Total Trips Out of Route'] * 90000  # Assuming 1 trip costs 90000 TZS
+    total_out_of_route_per_month = total_out_of_route_per_month.rename(columns={'Start Time': 'Start Month'})
     st.write("Total Number of Trips Out of Route per Month:")
     st.table(total_out_of_route_per_month)
+
+    # Bar chart showing trips made per day for the selected registration number if checkbox is selected
+    if show_trips_per_day_out_of_route:
+        draw_trips_per_day_chart(out_of_route_df)
+
+def draw_trips_per_day_chart(df):
+    # Line chart showing trips made per day
+    trips_per_day_chart = df.groupby(df['Start Time'].dt.date).size().reset_index(name='Trips per Day')
+    trips_per_day_chart['Start Time'] = pd.to_datetime(trips_per_day_chart['Start Time'])
+    st.subheader("Trips Made per Day:")
+    st.line_chart(trips_per_day_chart.set_index('Start Time'))
+
 
 def main():
     # Load dataset
@@ -119,7 +144,7 @@ def main():
     df['End Time'] = pd.to_datetime(df['End Time'])
 
     # Streamlit app title
-    st.title("Graphical Network Theory: Optimizing Route Planning")
+    st.title("Graphical Network Theory: Optimizing Route Planning App")
 
     # Visualization options
     visualization_options = ["Start Geofence Out of Route", "End Geofence Out of Route", "Network Graph", "Out of Route Network Diagram"]
@@ -141,8 +166,11 @@ def main():
         start_location_options = df['Start Location'].unique()
         selected_start_location = st.selectbox("Select Start Location", start_location_options)
 
+        # Checkbox for visualizing number of trips per day on the selected registration number
+        show_trips_per_day = st.checkbox("Show Trips Per Day")
+
         # Draw the network graph for the selected registration number and start location
-        draw_network_graph(df, selected_registration, selected_start_location)
+        draw_network_graph(df, selected_registration, selected_start_location, show_trips_per_day)
 
     elif selected_option == "Out of Route Network Diagram":
         # Dropdowns to select a specific registration number and start location for out of route network diagram
@@ -152,8 +180,11 @@ def main():
         start_location_options = df['Start Location'].unique()
         selected_start_location_out_of_route = st.selectbox("Select Start Location", start_location_options)
 
+        # Checkbox for visualizing number of trips per day on the selected registration number for out of route network diagram
+        show_trips_per_day_out_of_route = st.checkbox("Show Trips Per Day")
+
         # Draw the out of route network graph for the selected registration number and start location
-        draw_out_of_route_network_graph(df, selected_registration_out_of_route, selected_start_location_out_of_route)
+        draw_out_of_route_network_graph(df, selected_registration_out_of_route, selected_start_location_out_of_route, show_trips_per_day_out_of_route)
 
 if __name__ == "__main__":
     main()

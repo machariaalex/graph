@@ -4,9 +4,12 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import networkx as nx
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
-
-
+# Function to calculate the total cost on fuel
+def calculate_total_fuel_cost(distance):
+    # 1 litre covers 9 km, and 1 litre is sold at 3100 TZS
+    consumption_per_km = 1 / 9
+    cost_per_litre = 3100
+    return round((distance * consumption_per_km * cost_per_litre), 2)
 
 def plot_null_values(data, column):
     # Create a bar plot to visualize null values
@@ -17,24 +20,18 @@ def plot_null_values(data, column):
     plt.ylabel('Count')
     st.pyplot()
 
-def calculate_cost_on_fuel(row):
-    # Calculate cost on fuel based on average consumption and distance
-    average_consumption_per_litre = 9  # km per litre
-    fuel_cost_per_litre = 3100  # TZS per litre
-    return round((row['Distance'] / average_consumption_per_litre) * fuel_cost_per_litre, 2)
+def draw_network_graph(df, selected_registration, selected_start_location):
+    # Filter the dataframe based on the selected registration number and start location
+    filtered_df = df[(df['Registration'] == selected_registration) & (df['Start Location'] == selected_start_location)]
 
-def draw_network_graph(df, selected_start_location):
-    # Filter the dataframe based on the selected start location
-    filtered_df = df[df['Start Location'] == selected_start_location]
-
-    # Limit to only 5 trips
-    filtered_df = filtered_df.head(5)
+    # Limit to only 5 trips for network diagram
+    filtered_df_network = filtered_df.head(5)
 
     # Create a directed graph
     G = nx.DiGraph()
 
-    # Add nodes and edges
-    for index, row in filtered_df.iterrows():
+    # Add nodes and edges for network diagram
+    for index, row in filtered_df_network.iterrows():
         G.add_node(row['Start Location'])
         G.add_node(row['End Location'])
         G.add_edge(row['Start Location'], row['End Location'], weight=row['Distance'])
@@ -52,43 +49,56 @@ def draw_network_graph(df, selected_start_location):
     st.pyplot(fig)
 
     # Additional information in a table below the graph
-    st.subheader("Additional Information:")
-    additional_info = {
-        "Trip Number": list(range(1, len(filtered_df) + 1)),
-        "End Location": filtered_df['End Location'].tolist(),
-        "Distance": filtered_df['Distance'].round(2).tolist(),
-        "Cost on Fuel (TZS)": filtered_df.apply(calculate_cost_on_fuel, axis=1).round(2).tolist()
-    }
-    st.table(pd.DataFrame(additional_info).round(2))
+    st.subheader(f"Registration Number: {selected_registration}")
+    st.subheader(f"Start Location: {selected_start_location}")
 
-    st.write(f"Selected Start Location: {selected_start_location}")
+
+
+
+    # Table showing start time, start location, end time, end location, distance, and total cost on fuel of trips plotted on the network diagram
+    st.write("Trips Plotted on Network Diagram:")
+    additional_info_table = filtered_df_network[['Start Time', 'End Time', 'Start Location', 'End Location', 'Distance']]
+    additional_info_table['Total Cost on Fuel (TZS)'] = additional_info_table['Distance'].apply(calculate_total_fuel_cost)
+    st.table(additional_info_table)
+
+    # Total number of trips made per month for the selected registration number and start location
+    total_trips_per_month = filtered_df.groupby([filtered_df['Start Time'].dt.month, 'Registration']).size().reset_index(name='Total Trips')
+    st.write("Total Number of Trips per Month:")
+    st.table(total_trips_per_month.head(30))  # Limiting to 30 trips
+
+    
 
 def main():
     # Load dataset
-    df = pd.read_csv('clean_trip.csv')
+    df = pd.read_csv('clean_tripdd.csv')
+    df['Start Time'] = pd.to_datetime(df['Start Time'])
+    df['End Time'] = pd.to_datetime(df['End Time'])
 
     # Streamlit app title
     st.title("Data Visualization App")
 
     # Visualization options
-    visualization_options = ["Start Geofence Out of Route", "End Geofence Out of Route", "Network Graph"]
+    visualization_options = ["Missing Values in Start Geofence", "Missing Values in End Geofence", "Network Graph"]
     selected_option = st.selectbox("Select Visualization Type", visualization_options)
 
-    if selected_option == "Start Geofence Out of Route":
-        # Plot null values for 'Start Geofence Out of Route'
+    if selected_option == "Missing Values in Start Geofence":
+        # Plot null values for 'Start Geofence'
         plot_null_values(df, 'Start Geofence')
 
-    elif selected_option == "End Geofence Out of Route":
-        # Plot null values for 'End Geofence Out of Route'
+    elif selected_option == "Missing Values in End Geofence":
+        # Plot null values for 'End Geofence'
         plot_null_values(df, 'End Geofence')
 
     elif selected_option == "Network Graph":
-        # Dropdown to select a specific start location
+        # Dropdowns to select a specific registration number and start location
+        registration_options = df['Registration'].unique()
+        selected_registration = st.selectbox("Select Registration Number", registration_options)
+
         start_location_options = df['Start Location'].unique()
         selected_start_location = st.selectbox("Select Start Location", start_location_options)
 
-        # Draw the network graph for the selected start location
-        draw_network_graph(df, selected_start_location)
+        # Draw the network graph for the selected registration number and start location
+        draw_network_graph(df, selected_registration, selected_start_location)
 
 if __name__ == "__main__":
     main()

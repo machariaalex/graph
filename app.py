@@ -3,55 +3,35 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
 import networkx as nx
-import calendar
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Function to calculate the total cost on fuel
 def calculate_total_fuel_cost(distance):
-    # 1 litre covers 9 km, and 1 litre is sold at 3100 TZS
-    consumption_per_km = 1 / 9
+    consumption_per_km = 1 / 9  # 1 litre covers 9 km
     cost_per_litre = 3100
     return round((distance * consumption_per_km * cost_per_litre), 2)
 
 # Function to calculate the total fuel cost per month
 def calculate_total_fuel_cost_per_month(df):
     df['Total Cost on Fuel (TZS)'] = df['Distance'].apply(calculate_total_fuel_cost)
-    total_fuel_cost_per_month = df.groupby(df['Start Month'])['Total Cost on Fuel (TZS)'].sum().reset_index(name='Total Fuel Cost')
+    total_fuel_cost_per_month = df.groupby(df['Start Time'].dt.month)['Total Cost on Fuel (TZS)'].sum().reset_index(name='Total Fuel Cost')
+    total_fuel_cost_per_month['Start Month'] = total_fuel_cost_per_month['Start Time']
     return total_fuel_cost_per_month
 
-# Function to calculate fuel costs and percentages for the selected month
-def calculate_fuel_costs(df):
-    on_route_df = df[~df['Start Geofence'].isnull() & ~df['End Geofence'].isnull()]
-    out_of_route_df = df[df['Start Geofence'].isnull() & df['End Geofence'].isnull()]
-
-    on_route_fuel_cost = on_route_df['Distance'].apply(calculate_total_fuel_cost).sum()
-    out_of_route_fuel_cost = out_of_route_df['Distance'].apply(calculate_total_fuel_cost).sum()
-
-    total_fuel_cost = on_route_fuel_cost + out_of_route_fuel_cost
-
-    # Calculate percentages
-    percentage_on_route = (on_route_fuel_cost / total_fuel_cost) * 100
-    percentage_out_of_route = (out_of_route_fuel_cost / total_fuel_cost) * 100
-
-    return on_route_fuel_cost, out_of_route_fuel_cost, percentage_on_route, percentage_out_of_route
-
 def plot_null_values(data, column):
-    # Create a bar plot to visualize null values with a colored background
+    # Create a bar chart to visualize null values
     plt.figure(figsize=(8, 5))
     sns.set_theme(style="whitegrid")
-    ax = sns.barplot(x=data[column].isnull().value_counts().index, y=data[column].isnull().value_counts(), palette=["#ff7f0e", "#1f77b4"])
-
-    total = len(data[column])
-    for p in ax.patches:
-        percentage = '{:.2f}%'.format(100 * p.get_height()/total)
-        x = p.get_x() + p.get_width() / 2
-        y = p.get_height()
-        ax.annotate(percentage, (x, y), ha='center', va='center', color='black', size=12)
-
+    
+    null_counts = data[column].isnull().value_counts()
+    null_percentage = null_counts / len(data[column]) * 100
+    
+    st.bar_chart(null_percentage, label='Percentage of Null Values')
+    
     plt.title(f'Events Out of Route on {column}')
     plt.xlabel('Out of Route')
-    plt.ylabel('Count')
+    plt.ylabel('Percentage')
     st.pyplot()
 
 # Function to draw network graph

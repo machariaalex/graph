@@ -94,10 +94,9 @@ def draw_network_graph(df, selected_registration, selected_start_location, show_
     total_fuel_cost_per_month = calculate_total_fuel_cost_per_month(filtered_df_network)
     st.write("Total Fuel Cost per Month (Network Diagram):")
     st.table(total_fuel_cost_per_month)
-    print("Total Number of Trips per Month:")
-    print(total_trips_per_month.head(30))  # Limiting to 30 trips
+
+    st.write("Total Number of Trips per Month:")
     st.table(total_trips_per_month.head(30))  # Limiting to 30 trips
-  # Limiting to 30 trips
 
     # Line chart showing trips made per day for the selected registration number if checkbox is selected
     if show_trips_per_day:

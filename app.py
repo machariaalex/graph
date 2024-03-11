@@ -3,7 +3,10 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
 import networkx as nx
+import calendar
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
+
 # Function to calculate the total cost on fuel
 def calculate_total_fuel_cost(distance):
     # 1 litre covers 9 km, and 1 litre is sold at 3100 TZS
@@ -14,9 +17,24 @@ def calculate_total_fuel_cost(distance):
 # Function to calculate the total fuel cost per month
 def calculate_total_fuel_cost_per_month(df):
     df['Total Cost on Fuel (TZS)'] = df['Distance'].apply(calculate_total_fuel_cost)
-    total_fuel_cost_per_month = df.groupby(df['Start Time'].dt.month)['Total Cost on Fuel (TZS)'].sum().reset_index(name='Total Fuel Cost')
-    total_fuel_cost_per_month['Start Month'] = total_fuel_cost_per_month['Start Time']  # Add the 'Start Month' column
+    total_fuel_cost_per_month = df.groupby(df['Start Month'])['Total Cost on Fuel (TZS)'].sum().reset_index(name='Total Fuel Cost')
     return total_fuel_cost_per_month
+
+# Function to calculate fuel costs and percentages for the selected month
+def calculate_fuel_costs(df):
+    on_route_df = df[~df['Start Geofence'].isnull() & ~df['End Geofence'].isnull()]
+    out_of_route_df = df[df['Start Geofence'].isnull() & df['End Geofence'].isnull()]
+
+    on_route_fuel_cost = on_route_df['Distance'].apply(calculate_total_fuel_cost).sum()
+    out_of_route_fuel_cost = out_of_route_df['Distance'].apply(calculate_total_fuel_cost).sum()
+
+    total_fuel_cost = on_route_fuel_cost + out_of_route_fuel_cost
+
+    # Calculate percentages
+    percentage_on_route = (on_route_fuel_cost / total_fuel_cost) * 100
+    percentage_out_of_route = (out_of_route_fuel_cost / total_fuel_cost) * 100
+
+    return on_route_fuel_cost, out_of_route_fuel_cost, percentage_on_route, percentage_out_of_route
 
 def plot_null_values(data, column):
     # Create a bar plot to visualize null values with a colored background
@@ -36,6 +54,7 @@ def plot_null_values(data, column):
     plt.ylabel('Count')
     st.pyplot()
 
+# Function to draw network graph
 def draw_network_graph(df, selected_registration, selected_start_location, show_trips_per_day):
     # Filter the dataframe based on the selected registration number and start location
     filtered_df = df[(df['Registration'] == selected_registration) & (df['Start Location'] == selected_start_location)]
@@ -70,19 +89,18 @@ def draw_network_graph(df, selected_registration, selected_start_location, show_
 
     # Table showing start month, start location, end time, end location, distance, and total cost on fuel of trips plotted on the network diagram
     st.write("Trips Plotted on Network Diagram:")
-    additional_info_table = filtered_df_network[['Start Time', 'End Time', 'Start Location', 'End Location', 'Distance']]
+    additional_info_table = filtered_df_network[['Start Month', 'End Time', 'Start Location', 'End Location', 'Distance']]
     additional_info_table['Total Cost on Fuel (TZS)'] = additional_info_table['Distance'].apply(calculate_total_fuel_cost)
-    additional_info_table['Start Month'] = additional_info_table['Start Time'].dt.month
     st.table(additional_info_table)
 
     # Total number of trips made per month for the selected registration number and start location
-    total_trips_per_month = filtered_df.groupby([filtered_df['Start Time'].dt.month, 'Registration']).size().reset_index(name='Total Trips')
+    total_trips_per_month = filtered_df.groupby(['Start Month', 'Registration']).size().reset_index(name='Total Trips')
     total_trips_per_month['Total Cost'] = total_trips_per_month['Total Trips'] * 90000  # Assuming 1 trip costs 90000 TZS
-    total_trips_per_month = total_trips_per_month.rename(columns={'Start Time': 'Start Month'})
+    total_trips_per_month = total_trips_per_month.rename(columns={'Start Month': 'Month'})
 
     # Add a 'Totals' row
     totals_row = pd.DataFrame({
-        'Start Month': ['Totals'],
+        'Month': ['Totals'],
         'Registration': [''],
         'Total Trips': [total_trips_per_month['Total Trips'].sum()],
         'Total Cost': [total_trips_per_month['Total Cost'].sum()]
@@ -136,19 +154,18 @@ def draw_out_of_route_network_graph(df, selected_registration, selected_start_lo
 
     # Table showing start month, start location, end time, end location, distance, and total cost on fuel of out of route trips
     st.write("Trips Out of Route:")
-    out_of_route_table = out_of_route_df_network[['Start Time', 'End Time', 'Start Location', 'End Location', 'Distance']]
+    out_of_route_table = out_of_route_df_network[['Start Month', 'End Time', 'Start Location', 'End Location', 'Distance']]
     out_of_route_table['Total Cost on Fuel (TZS)'] = out_of_route_table['Distance'].apply(calculate_total_fuel_cost)
-    out_of_route_table['Start Month'] = out_of_route_table['Start Time'].dt.month
     st.table(out_of_route_table)
 
     # Total number of trips per month that were out of route for the selected registration number and start location
-    total_out_of_route_per_month = out_of_route_df.groupby([out_of_route_df['Start Time'].dt.month, 'Registration']).size().reset_index(name='Total Trips Out of Route')
+    total_out_of_route_per_month = out_of_route_df.groupby(['Start Month', 'Registration']).size().reset_index(name='Total Trips Out of Route')
     total_out_of_route_per_month['Total Cost'] = total_out_of_route_per_month['Total Trips Out of Route'] * 90000  # Assuming 1 trip costs 90000 TZS
-    total_out_of_route_per_month = total_out_of_route_per_month.rename(columns={'Start Time': 'Start Month'})
+    total_out_of_route_per_month = total_out_of_route_per_month.rename(columns={'Start Month': 'Month'})
 
     # Add a 'Totals' row
     totals_row = pd.DataFrame({
-        'Start Month': ['Totals'],
+        'Month': ['Totals'],
         'Registration': [''],
         'Total Trips Out of Route': [total_out_of_route_per_month['Total Trips Out of Route'].sum()],
         'Total Cost': [total_out_of_route_per_month['Total Cost'].sum()]
@@ -170,7 +187,7 @@ def draw_out_of_route_network_graph(df, selected_registration, selected_start_lo
 
 def draw_trips_per_day_chart(df):
     # Line chart showing trips made per day
-    trips_per_day_chart = df.groupby(df['Start Time'].dt.date).size().reset_index(name='Trips per Day')
+    trips_per_day_chart = df.groupby(['Start Month', 'Start Time']).size().reset_index(name='Trips per Day')
     trips_per_day_chart['Start Time'] = pd.to_datetime(trips_per_day_chart['Start Time'])
     st.subheader("Trips Made per Day:")
     st.line_chart(trips_per_day_chart.set_index('Start Time'))
@@ -180,6 +197,7 @@ def main():
     df = pd.read_csv('clean_tripdd.csv')
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
+    df['Start Month'] = df['Start Time'].dt.month_name()
 
     # Streamlit app title
     st.title("Graphical Network Theory: Optimizing Route Planning App")
@@ -229,21 +247,25 @@ def main():
         registration_options = df['Registration'].unique()
         selected_registration_fuel_comparison = st.selectbox("Select Registration Number", registration_options)
 
-        month_options = df['Start Time'].dt.month.unique()
+        month_options = df['Start Month'].unique()
         selected_month_fuel_comparison = st.selectbox("Select Month", month_options)
 
         # Filter the dataframe based on the selected registration number and month
-        filtered_df_fuel_comparison = df[(df['Registration'] == selected_registration_fuel_comparison) & (df['Start Time'].dt.month == selected_month_fuel_comparison)]
+        filtered_df_fuel_comparison = df[(df['Registration'] == selected_registration_fuel_comparison) & (df['Start Month'] == selected_month_fuel_comparison)]
 
         # Calculate total fuel cost for both on-route and out-of-route trips
-        total_fuel_cost_network = filtered_df_fuel_comparison[~filtered_df_fuel_comparison['Start Geofence'].isnull() & ~filtered_df_fuel_comparison['End Geofence'].isnull()]['Distance'].apply(calculate_total_fuel_cost).sum()
-        total_fuel_cost_out_of_route = filtered_df_fuel_comparison[filtered_df_fuel_comparison['Start Geofence'].isnull() & filtered_df_fuel_comparison['End Geofence'].isnull()]['Distance'].apply(calculate_total_fuel_cost).sum()
+        on_route_fuel_cost, out_of_route_fuel_cost, percentage_on_route, percentage_out_of_route = calculate_fuel_costs(filtered_df_fuel_comparison)
 
         # Bar plot for the comparison
         fig, ax = plt.subplots()
-        ax.bar(['Network Diagram', 'Out of Route Network Diagram'], [total_fuel_cost_network, total_fuel_cost_out_of_route], color=['skyblue', 'orange'])
+        ax.bar(['Network Diagram', 'Out of Route Network Diagram'], [on_route_fuel_cost, out_of_route_fuel_cost], color=['skyblue', 'orange'])
         ax.set_ylabel('Total Fuel Cost (TZS)')
         ax.set_title('Out of Route Fuel Consumption vs On-Route Fuel Consumption')
+
+        # Annotate percentages on the bars
+        ax.text(0, on_route_fuel_cost, f'{percentage_on_route:.2f}%', ha='center', va='bottom', color='black', fontweight='bold')
+        ax.text(1, out_of_route_fuel_cost, f'{percentage_out_of_route:.2f}%', ha='center', va='bottom', color='black', fontweight='bold')
+
         st.pyplot(fig)
 
 if __name__ == "__main__":

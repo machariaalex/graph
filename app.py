@@ -28,8 +28,8 @@ def plot_null_values(data, column):
     for i, value in enumerate(null_value_counts):
         plt.text(i, value + 5, f'{percentages[i]:.2f}%', ha='center', va='bottom')
     
-    plt.title(f'Geofence Out of Route in {column}')
-    plt.xlabel('Out of Route')
+    plt.title(f'Distribution of Out of Route Event in {column}')
+    plt.xlabel('Out of Route Events')
     plt.ylabel('Count')
     st.pyplot()
 

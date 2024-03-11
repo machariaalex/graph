@@ -47,6 +47,10 @@ def draw_network_graph(df, selected_registration, selected_start_location):
     nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
     nx.draw_networkx_labels(G, pos, font_color='black')
 
+    # Disable the PyplotGlobalUseWarning by setting the config option
+    st.set_option('deprecation.showPyplotGlobalUse', False)
+    st.pyplot()
+
     # Display the plot using Streamlit
     st.pyplot(fig)
 

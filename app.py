@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import networkx as nx
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
-
 # Function to calculate the total cost on fuel
 def calculate_total_fuel_cost(distance):
     # 1 litre covers 9 km, and 1 litre is sold at 3100 TZS
@@ -22,17 +20,18 @@ def plot_null_values(data, column):
     percentages = null_value_counts / null_value_counts.sum() * 100
     
     # Plot the bar chart
-    sns.barplot(x=null_value_counts.index, y=null_value_counts, palette="viridis")
+    ax = sns.barplot(x=null_value_counts.index, y=null_value_counts, palette="viridis")
     
-    # Add percentages on top of the bars
+    # Add percentages on top right of the bars with color representation
     for i, value in enumerate(null_value_counts):
-        plt.text(i, value + 5, f'{percentages[i]:.2f}%', ha='center', va='bottom')
+        percentage_text = f'{percentages[i]:.2f}%'
+        color = 'red' if percentages[i] > 50 else 'black'  # Change color based on percentage
+        ax.text(i, value, percentage_text, ha='center', va='bottom', color=color, fontsize=10)
     
-    plt.title(f'Distribution of Out of Route Event in {column}')
-    plt.xlabel('Out of Route Events')
+    plt.title(f'Null Values in {column}')
+    plt.xlabel('Null Values')
     plt.ylabel('Count')
     st.pyplot()
-
 
 def draw_network_graph(df, selected_registration, selected_start_location):
     # Filter the dataframe based on the selected registration number and start location
@@ -58,10 +57,6 @@ def draw_network_graph(df, selected_registration, selected_start_location):
     nx.draw_networkx_edges(G, pos, edge_color='gray', arrowsize=20)
     nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
     nx.draw_networkx_labels(G, pos, font_color='black')
-
-    # Disable the PyplotGlobalUseWarning by setting the config option
-    st.set_option('deprecation.showPyplotGlobalUse', False)
-    st.pyplot()
 
     # Display the plot using Streamlit
     st.pyplot(fig)

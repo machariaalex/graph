@@ -187,7 +187,7 @@ def draw_out_of_route_network_graph(df, selected_registration, selected_start_lo
 
 def draw_trips_per_day_chart(df):
     # Line chart showing trips made per day
-    trips_per_day_chart = df.groupby(['Start Month', 'Start Time']).size().reset_index(name='Trips per Day')
+    trips_per_day_chart = df.groupby(df['Start Time'].dt.date).size().reset_index(name='Trips per Day')
     trips_per_day_chart['Start Time'] = pd.to_datetime(trips_per_day_chart['Start Time'])
     st.subheader("Trips Made per Day:")
     st.line_chart(trips_per_day_chart.set_index('Start Time'))

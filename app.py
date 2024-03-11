@@ -185,7 +185,7 @@ def main():
     st.title("Graphical Network Theory: Optimizing Route Planning App")
 
     # Visualization options
-    visualization_options = ["Start Geofence Out of Route", "End Geofence Out of Route", "Network Graph", "Out of Route Network Diagram", "Total Fuel Cost Comparison"]
+    visualization_options = ["Start Geofence Out of Route", "End Geofence Out of Route", "Network Graph", "Out of Route Network Diagram", "Out of Route Fuel Consumption vs On Route Fuel Consumption"]
     selected_option = st.selectbox("Select Visualization Type", visualization_options)
 
     if selected_option == "Start Geofence Out of Route":
@@ -224,7 +224,7 @@ def main():
         # Draw the out of route network graph for the selected registration number and start location
         draw_out_of_route_network_graph(df, selected_registration_out_of_route, selected_start_location_out_of_route, show_trips_per_day_out_of_route)
 
-    elif selected_option == "Total Fuel Cost Comparison":
+    elif selected_option == "Out of Route Fuel Consumption vs On Route Fuel Consumption":
         # Dropdowns to select a specific registration number and month for fuel cost comparison
         registration_options = df['Registration'].unique()
         selected_registration_fuel_comparison = st.selectbox("Select Registration Number", registration_options)
@@ -243,7 +243,7 @@ def main():
         fig, ax = plt.subplots()
         ax.bar(['Network Diagram', 'Out of Route Network Diagram'], [total_fuel_cost_network, total_fuel_cost_out_of_route], color=['skyblue', 'orange'])
         ax.set_ylabel('Total Fuel Cost (TZS)')
-        ax.set_title('Total Fuel Cost Comparison')
+        ax.set_title('Out of Route Fuel Consumption vs On-Route Fuel Consumption')
         st.pyplot(fig)
 
 if __name__ == "__main__":

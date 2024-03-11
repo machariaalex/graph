@@ -52,9 +52,6 @@ def draw_network_graph(df, selected_registration, selected_start_location):
     st.subheader(f"Registration Number: {selected_registration}")
     st.subheader(f"Start Location: {selected_start_location}")
 
-
-
-
     # Table showing start time, start location, end time, end location, distance, and total cost on fuel of trips plotted on the network diagram
     st.write("Trips Plotted on Network Diagram:")
     additional_info_table = filtered_df_network[['Start Time', 'End Time', 'Start Location', 'End Location', 'Distance']]
@@ -66,8 +63,6 @@ def draw_network_graph(df, selected_registration, selected_start_location):
     st.write("Total Number of Trips per Month:")
     st.table(total_trips_per_month.head(30))  # Limiting to 30 trips
 
-    
-
 def main():
     # Load dataset
     df = pd.read_csv('clean_tripdd.csv')
@@ -78,14 +73,14 @@ def main():
     st.title("Data Visualization App")
 
     # Visualization options
-    visualization_options = ["Missing Values in Start Geofence", "Missing Values in End Geofence", "Network Graph"]
+    visualization_options = ["Start Geofence Out of Route", "End Geofence Out of Route", "Network Graph"]
     selected_option = st.selectbox("Select Visualization Type", visualization_options)
 
-    if selected_option == "Missing Values in Start Geofence":
+    if selected_option == "Start Geofence Out of Route":
         # Plot null values for 'Start Geofence'
         plot_null_values(df, 'Start Geofence')
 
-    elif selected_option == "Missing Values in End Geofence":
+    elif selected_option == "End Geofence Out of Route":
         # Plot null values for 'End Geofence'
         plot_null_values(df, 'End Geofence')
 

@@ -16,11 +16,23 @@ def calculate_total_fuel_cost(distance):
 def plot_null_values(data, column):
     # Create a bar plot to visualize null values
     plt.figure(figsize=(8, 5))
-    sns.barplot(x=data[column].isnull().value_counts().index, y=data[column].isnull().value_counts(), palette="viridis")
-    plt.title(f'Null Values in {column}')
-    plt.xlabel('Null Values')
+    null_value_counts = data[column].isnull().value_counts()
+    
+    # Calculate percentages
+    percentages = null_value_counts / null_value_counts.sum() * 100
+    
+    # Plot the bar chart
+    sns.barplot(x=null_value_counts.index, y=null_value_counts, palette="viridis")
+    
+    # Add percentages on top of the bars
+    for i, value in enumerate(null_value_counts):
+        plt.text(i, value + 5, f'{percentages[i]:.2f}%', ha='center', va='bottom')
+    
+    plt.title(f'Geofence Out of Route in {column}')
+    plt.xlabel('Out of Route')
     plt.ylabel('Count')
     st.pyplot()
+
 
 def draw_network_graph(df, selected_registration, selected_start_location):
     # Filter the dataframe based on the selected registration number and start location

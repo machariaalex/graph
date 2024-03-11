@@ -4,6 +4,10 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import networkx as nx
 
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
+
+
 def plot_null_values(data, column):
     # Create a bar plot to visualize null values
     plt.figure(figsize=(8, 5))
@@ -67,15 +71,15 @@ def main():
     st.title("Data Visualization App")
 
     # Visualization options
-    visualization_options = ["Missing Values in Start Geofence", "Missing Values in End Geofence", "Network Graph"]
+    visualization_options = ["Start Geofence Out of Route", "End Geofence Out of Route", "Network Graph"]
     selected_option = st.selectbox("Select Visualization Type", visualization_options)
 
-    if selected_option == "Missing Values in Start Geofence":
-        # Plot null values for 'Start Geofence'
+    if selected_option == "Start Geofence Out of Route":
+        # Plot null values for 'Start Geofence Out of Route'
         plot_null_values(df, 'Start Geofence')
 
-    elif selected_option == "Missing Values in End Geofence":
-        # Plot null values for 'End Geofence'
+    elif selected_option == "End Geofence Out of Route":
+        # Plot null values for 'End Geofence Out of Route'
         plot_null_values(df, 'End Geofence')
 
     elif selected_option == "Network Graph":

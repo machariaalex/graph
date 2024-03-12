@@ -243,15 +243,31 @@ def main():
         draw_out_of_route_network_graph(df, selected_registration_out_of_route, selected_start_location_out_of_route, show_trips_per_day_out_of_route)
 
     elif selected_option == "Out of Route Fuel Consumption vs On Route Fuel Consumption":
-        # Dropdowns to select a specific registration number and month for fuel cost comparison
-        registration_options = df['Registration'].unique()
-        selected_registration_fuel_comparison = st.selectbox("Select Registration Number", registration_options)
+        # Radio buttons for selecting registration number or all registration numbers
+        fuel_comparison_option = st.radio("Select Registration Number or All Registration Numbers", ["Select Registration Number", "Select All Registration Numbers"])
 
-        month_options = df['Start Month'].unique()
-        selected_month_fuel_comparison = st.selectbox("Select Month", month_options)
 
-        # Filter the dataframe based on the selected registration number and month
-        filtered_df_fuel_comparison = df[(df['Registration'] == selected_registration_fuel_comparison) & (df['Start Month'] == selected_month_fuel_comparison)]
+
+        # If "Select All Registration Numbers" is chosen, use the entire dataframe
+
+            
+
+        # If "Select Registration Number" is chosen, provide a dropdown to select the registration number
+        if fuel_comparison_option == "Select All Registration Numbers":
+
+            filtered_df_fuel_comparison = df
+
+            
+
+           
+
+        else:
+
+            registration_options = df['Registration'].unique()
+            selected_registration_fuel_comparison = st.selectbox("Select Registration Number", registration_options)
+             # Filter the dataframe based on the selected registration number
+            filtered_df_fuel_comparison = df[df['Registration'] == selected_registration_fuel_comparison]
+            # If "Select All Registration Numbers" is chosen, use the entire dataframe
 
         # Calculate total fuel cost for both on-route and out-of-route trips
         on_route_fuel_cost, out_of_route_fuel_cost, percentage_on_route, percentage_out_of_route = calculate_fuel_costs(filtered_df_fuel_comparison)

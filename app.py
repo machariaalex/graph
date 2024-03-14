@@ -213,7 +213,7 @@ def main():
     - Assessing per diem costs and identifying potential savings.
     - Estimating maintenance costs and identifying opportunities for cost reductions.
 
-    *Moving forward, our vision is to evolve this model into a predictive tool that will optimize routes for field operations teams in Tanzania, enhancing efficiency and driving cost savings.
+    Moving forward, our vision is to evolve this model into a predictive tool that will optimize routes for field operations teams in Tanzania, enhancing efficiency and driving cost savings.
 
     *The landing page for our web application will showcase the insights gleaned from this optimization model. We invite you to explore and engage with the features as we continue to refine and enhance our system to meet your operational needs.*
     """)

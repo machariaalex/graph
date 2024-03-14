@@ -200,7 +200,7 @@ def main():
     df['Start Month'] = df['Start Time'].dt.month_name()
 
     # Streamlit app title
-    st.title("Route Optimization System for Field Operations in Tanzani")
+    st.title("Route Optimization System for Field Operations in Tanzania")
 
     # Visualization options
     visualization_options = ["Start Geofence Out of Route", "End Geofence Out of Route", "Network Graph", "Out of Route Network Diagram", "Out of Route Fuel Consumption vs On Route Fuel Consumption"]

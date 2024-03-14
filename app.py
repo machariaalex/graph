@@ -207,7 +207,7 @@ def main():
     show_start_geofence_out_of_route = st.sidebar.checkbox("Show Start Geofence Out of Route")
     show_end_geofence_out_of_route = st.sidebar.checkbox("Show End Geofence Out of Route")
     show_within_geofence = st.sidebar.checkbox("Show Within the Geofence")
-    show_out_of_route_network_diagram = st.sidebar.checkbox("Show Within Geofence")
+    show_out_of_route_network_diagram = st.sidebar.checkbox("Show Out of Geofence")
     show_fuel_consumption_comparison = st.sidebar.checkbox("Show Out of Geofence Fuel Consumption vs Within Geofence Fuel Consumption")
 
     if show_start_geofence_out_of_route:

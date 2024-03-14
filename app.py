@@ -206,7 +206,7 @@ def main():
     st.sidebar.title("Visualization Options")
     show_start_geofence_out_of_route = st.sidebar.checkbox("Show Start Geofence Out of Route")
     show_end_geofence_out_of_route = st.sidebar.checkbox("Show End Geofence Out of Route")
-    show_network_graph = st.sidebar.checkbox("Show Network Graph")
+    show_within_geofence = st.sidebar.checkbox("Show Within the Geofence")
     show_out_of_route_network_diagram = st.sidebar.checkbox("Show Out of Route Network Diagram")
     show_fuel_consumption_comparison = st.sidebar.checkbox("Show Out of Route Fuel Consumption vs On Route Fuel Consumption")
 
@@ -218,7 +218,7 @@ def main():
         # Plot null values for 'End Geofence'
         plot_null_values(df, 'End Geofence')
 
-    if show_network_graph:
+    if show_within_geofence:
         # Dropdowns to select a specific registration number and start location
         registration_options = df['Registration'].unique()
         selected_registration = st.selectbox("Select Registration Number", registration_options)

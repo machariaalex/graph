@@ -202,6 +202,21 @@ def main():
     # Streamlit app title
     st.title("Route Optimization System for Field Operations in Tanzania")
 
+    st.subheader("Welcome to Version 1 of our Route Optimization System")
+    st.markdown("""
+    This model has been meticulously crafted using data sourced from car trackers, particularly Sanku’s primary fleet management tool, covering the period from October 2023 to January 2024. As of now, we are working with a sample size of 5,000 entries out of a total of 21,914 entries. Due to computational limitations, we are constrained to using this sample, but we anticipate leveraging the entire dataset during the piloting and production phases.
+
+    Our primary goal with this model is diagnostic in nature, focusing on the following objectives:
+    
+    - Analyzing fuel consumption to identify potential savings.
+    - Evaluating time consumption to identify areas for efficiency gains.
+    - Assessing per diem costs and identifying potential savings.
+    - Estimating maintenance costs and identifying opportunities for cost reductions.
+
+    *Moving forward, our vision is to evolve this model into a predictive tool that will optimize routes for field operations teams in Tanzania, enhancing efficiency and driving cost savings.
+
+    *The landing page for our web application will showcase the insights gleaned from this optimization model. We invite you to explore and engage with the features as we continue to refine and enhance our system to meet your operational needs.*
+    """)
     # Visualization options
     st.sidebar.title("Visualization Options")
     show_start_geofence_out_of_route = st.sidebar.checkbox("Show Start Out of Geofence")

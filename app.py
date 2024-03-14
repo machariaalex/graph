@@ -264,9 +264,9 @@ def main():
 
         # Bar plot for the comparison
         fig, ax = plt.subplots()
-        ax.bar(['Network Diagram', 'Out of Route Network Diagram'], [on_route_fuel_cost, out_of_route_fuel_cost], color=['skyblue', 'orange'])
+        ax.bar(['Within Geofence', 'Out of Geofence'], [on_route_fuel_cost, out_of_route_fuel_cost], color=['skyblue', 'orange'])
         ax.set_ylabel('Total Fuel Cost (TZS)')
-        ax.set_title('Out of Route Fuel Consumption vs On-Route Fuel Consumption')
+        ax.set_title('Out of Goefence Fuel Consumption vs Within Geofence Fuel Consumption')
 
         # Annotate percentages on the bars
         ax.text(0, on_route_fuel_cost, f'{percentage_on_route:.2f}%', ha='center', va='bottom', color='black', fontweight='bold')

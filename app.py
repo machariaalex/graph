@@ -49,7 +49,7 @@ def plot_null_values(data, column):
         y = p.get_height()
         ax.annotate(percentage, (x, y), ha='center', va='center', color='black', size=12)
 
-    plt.title(f'Events Out of Route on {column}')
+    plt.title(f'Trips Out of Route on {column}')
     plt.xlabel('Out of Route')
     plt.ylabel('No. of Trips')
     st.pyplot()

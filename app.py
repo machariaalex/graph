@@ -51,7 +51,7 @@ def plot_null_values(data, column):
 
     plt.title(f'Events Out of Route on {column}')
     plt.xlabel('Out of Route')
-    plt.ylabel('No of Trips')
+    plt.ylabel('No. of Trips')
     st.pyplot()
 
 # Function to draw network graph
@@ -203,18 +203,22 @@ def main():
     st.title("Route Optimization System for Field Operations in Tanzania")
 
     # Visualization options
-    visualization_options = ["Start Geofence Out of Route", "End Geofence Out of Route", "Network Graph", "Out of Route Network Diagram", "Out of Route Fuel Consumption vs On Route Fuel Consumption"]
-    selected_option = st.selectbox("Select Visualization Type", visualization_options)
+    st.sidebar.title("Visualization Options")
+    show_start_geofence_out_of_route = st.sidebar.checkbox("Show Start Geofence Out of Route")
+    show_end_geofence_out_of_route = st.sidebar.checkbox("Show End Geofence Out of Route")
+    show_network_graph = st.sidebar.checkbox("Show Network Graph")
+    show_out_of_route_network_diagram = st.sidebar.checkbox("Show Out of Route Network Diagram")
+    show_fuel_consumption_comparison = st.sidebar.checkbox("Show Out of Route Fuel Consumption vs On Route Fuel Consumption")
 
-    if selected_option == "Start Geofence Out of Route":
+    if show_start_geofence_out_of_route:
         # Plot null values for 'Start Geofence'
         plot_null_values(df, 'Start Geofence')
 
-    elif selected_option == "End Geofence Out of Route":
+    if show_end_geofence_out_of_route:
         # Plot null values for 'End Geofence'
         plot_null_values(df, 'End Geofence')
 
-    elif selected_option == "Network Graph":
+    if show_network_graph:
         # Dropdowns to select a specific registration number and start location
         registration_options = df['Registration'].unique()
         selected_registration = st.selectbox("Select Registration Number", registration_options)
@@ -228,7 +232,7 @@ def main():
         # Draw the network graph for the selected registration number and start location
         draw_network_graph(df, selected_registration, selected_start_location, show_trips_per_day)
 
-    elif selected_option == "Out of Route Network Diagram":
+    if show_out_of_route_network_diagram:
         # Dropdowns to select a specific registration number and start location for out of route network diagram
         registration_options = df['Registration'].unique()
         selected_registration_out_of_route = st.selectbox("Select Registration Number", registration_options)
@@ -242,32 +246,18 @@ def main():
         # Draw the out of route network graph for the selected registration number and start location
         draw_out_of_route_network_graph(df, selected_registration_out_of_route, selected_start_location_out_of_route, show_trips_per_day_out_of_route)
 
-    elif selected_option == "Out of Route Fuel Consumption vs On Route Fuel Consumption":
+    if show_fuel_consumption_comparison:
         # Radio buttons for selecting registration number or all registration numbers
         fuel_comparison_option = st.radio("Select Registration Number or All Registration Numbers", ["Select Registration Number", "Select All Registration Numbers"])
 
-
-
         # If "Select All Registration Numbers" is chosen, use the entire dataframe
-
-            
-
-        # If "Select Registration Number" is chosen, provide a dropdown to select the registration number
         if fuel_comparison_option == "Select All Registration Numbers":
-
             filtered_df_fuel_comparison = df
-
-            
-
-           
-
         else:
-
             registration_options = df['Registration'].unique()
             selected_registration_fuel_comparison = st.selectbox("Select Registration Number", registration_options)
-             # Filter the dataframe based on the selected registration number
+            # Filter the dataframe based on the selected registration number
             filtered_df_fuel_comparison = df[df['Registration'] == selected_registration_fuel_comparison]
-            # If "Select All Registration Numbers" is chosen, use the entire dataframe
 
         # Calculate total fuel cost for both on-route and out-of-route trips
         on_route_fuel_cost, out_of_route_fuel_cost, percentage_on_route, percentage_out_of_route = calculate_fuel_costs(filtered_df_fuel_comparison)

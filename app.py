@@ -51,7 +51,7 @@ def plot_null_values(data, column):
 
     plt.title(f'Events Out of Route on {column}')
     plt.xlabel('Out of Route')
-    plt.ylabel('Count')
+    plt.ylabel('No of Trips')
     st.pyplot()
 
 # Function to draw network graph

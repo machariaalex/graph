@@ -49,7 +49,7 @@ def plot_null_values(data, column):
         y = p.get_height()
         ax.annotate(percentage, (x, y), ha='center', va='center', color='black', size=12)
 
-    plt.title(f'Trips that Started Out of Geofence' if column == 'Start Geofence' else f'Trips that Ended Out of Geofence')
+    plt.title(f'Analysis of the trips that started out of geofence' if column == 'Start Geofence' else f'Analysis of the trips that Ended out of geofence')
     plt.xlabel('Out of Route')
     plt.ylabel('No. of Trips')
     st.pyplot()

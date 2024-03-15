@@ -49,10 +49,22 @@ def plot_null_values(data, column):
         y = p.get_height()
         ax.annotate(percentage, (x, y), ha='center', va='center', color='black', size=12)
 
-    plt.title(f'Trips Out of Route on {column}')
+    plt.title(f'Trips that Started Out of Geofence' if column == 'Start Geofence' else f'Trips that Ended Out of Geofence')
     plt.xlabel('Out of Route')
     plt.ylabel('No. of Trips')
     st.pyplot()
+
+    if column == 'Start Geofence':
+        # Insights for Trips that Started Out of Geofence
+        st.subheader("Insights:")
+        st.write("1. An average of 60% of the amount spent on fuel was out of the geofence.")
+        st.write("2. Three out of 5 trips made by RMs in day started out of the geofence.")
+
+    elif column == 'End Geofence':
+        # Insights for Trips that Started Out of Geofence
+        st.subheader("Insights:")
+        st.write("1. An average of 62.62% of the amount spent on fuel was out of the geofence.")
+        st.write("2. Three out of 5 trips made by RMs in day started out of the geofence.")
 
 # Function to draw network graph
 def draw_network_graph(df, selected_registration, selected_start_location, show_trips_per_day):
@@ -120,174 +132,62 @@ def draw_network_graph(df, selected_registration, selected_start_location, show_
     if show_trips_per_day:
         draw_trips_per_day_chart(filtered_df)
 
-def draw_out_of_route_network_graph(df, selected_registration, selected_start_location, show_trips_per_day_out_of_route):
-    # Filter the dataframe for trips where both Start and End Geofence are null (Out of Route)
-    out_of_route_df = df[(df['Start Geofence'].isnull()) & (df['End Geofence'].isnull()) & (df['Registration'] == selected_registration) & (df['Start Location'] == selected_start_location)]
-
-    # Limit to only 5 trips for out of route network diagram
-    out_of_route_df_network = out_of_route_df.head(5)
-
-    # Create a directed graph for out of route network diagram
-    G = nx.DiGraph()
-
-    # Add nodes and edges for out of route network diagram
-    for index, row in out_of_route_df_network.iterrows():
-        G.add_node(row['Start Location'])
-        G.add_node(row['End Location'])
-        G.add_edge(row['Start Location'], row['End Location'], weight=row['Distance'])
-
-    # Draw the out of route network graph
-    fig, ax = plt.subplots()
-    pos = nx.spring_layout(G, seed=42)  # Seed for reproducibility
-    labels = nx.get_edge_attributes(G, 'weight')
-    nx.draw_networkx_nodes(G, pos, node_size=700, node_color='orange')  # Use orange for out of route trips
-    nx.draw_networkx_edges(G, pos, edge_color='gray', arrowsize=20)
-    nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
-    nx.draw_networkx_labels(G, pos, font_color='black')
-
-    # Display the plot using Streamlit
-    st.pyplot(fig)
-
-    # Additional information in a table below the graph for out of route trips
-    st.subheader(f"Registration Number: {selected_registration}")
-    st.subheader(f"Start Location: {selected_start_location}")
-
-    # Table showing start month, start location, end time, end location, distance, and total cost on fuel of out of route trips
-    st.write("Trips Out of Route:")
-    out_of_route_table = out_of_route_df_network[['Start Month', 'End Time', 'Start Location', 'End Location', 'Distance']]
-    out_of_route_table['Total Cost on Fuel (TZS)'] = out_of_route_table['Distance'].apply(calculate_total_fuel_cost)
-    st.table(out_of_route_table)
-
-    # Total number of trips per month that were out of route for the selected registration number and start location
-    total_out_of_route_per_month = out_of_route_df.groupby(['Start Month', 'Registration']).size().reset_index(name='Total Trips Out of Route')
-    total_out_of_route_per_month['Total Cost'] = total_out_of_route_per_month['Total Trips Out of Route'] * 90000  # Assuming 1 trip costs 90000 TZS
-    total_out_of_route_per_month = total_out_of_route_per_month.rename(columns={'Start Month': 'Month'})
-
-    # Add a 'Totals' row
-    totals_row = pd.DataFrame({
-        'Month': ['Totals'],
-        'Registration': [''],
-        'Total Trips Out of Route': [total_out_of_route_per_month['Total Trips Out of Route'].sum()],
-        'Total Cost': [total_out_of_route_per_month['Total Cost'].sum()]
-    })
-
-    total_out_of_route_per_month = pd.concat([total_out_of_route_per_month, totals_row], ignore_index=True)
-
-    # Calculate total fuel cost per month for out of route trips
-    total_fuel_cost_out_of_route_per_month = calculate_total_fuel_cost_per_month(out_of_route_df_network)
-    st.write("Total Fuel Cost per Month (Out of Route):")
-    st.table(total_fuel_cost_out_of_route_per_month)
-
-    st.write("Total Number of Trips Out of Route per Month:")
-    st.table(total_out_of_route_per_month)
-
-    # Line chart showing trips made per day for the selected registration number if checkbox is selected
-    if show_trips_per_day_out_of_route:
-        draw_trips_per_day_chart(out_of_route_df)
-
-def draw_trips_per_day_chart(df):
-    # Line chart showing trips made per day
-    trips_per_day_chart = df.groupby(df['Start Time'].dt.date).size().reset_index(name='Trips per Day')
-    trips_per_day_chart['Start Time'] = pd.to_datetime(trips_per_day_chart['Start Time'])
-    st.subheader("Trips Made per Day:")
-    st.line_chart(trips_per_day_chart.set_index('Start Time'))
-
 def main():
-    # Load dataset
-    df = pd.read_csv('clean_tripdd.csv')
-    df['Start Time'] = pd.to_datetime(df['Start Time'])
-    df['End Time'] = pd.to_datetime(df['End Time'])
-    df['Start Month'] = df['Start Time'].dt.month_name()
-
     # Streamlit app title
     st.title("Route Optimization System for Field Operations in Tanzania")
 
-    st.subheader("Welcome to Version 1 of our Route Optimization System")
-    st.markdown("""
-    This model has been crafted using data sourced from car tracker, particularly Sanku’s primary fleet management tool, covering the period from **October 2023 to January 2024.** As of now, we are working with a sample size of **5,000** entries out of a total of **21,914** entries. Due to computational limitations, we are constrained to using this sample, but we anticipate leveraging the entire dataset during the piloting and production phases.
+    # Navigation
+    page = st.sidebar.radio("Navigation", ["Landing", "Visualizations"])
 
-    Our primary goal with this model is diagnostic in nature, focusing on the following objectives:
-    
-    - Analyzing fuel consumption to identify potential savings.
-    - Evaluating time consumption to identify areas for efficiency gains.
-    - Assessing per diem costs and identifying potential savings.
-    - Estimating maintenance costs and identifying opportunities for cost reductions.
+    if page == "Landing":
+        st.subheader("Welcome to Version 1 of our Route Optimization System")
+        st.markdown("""
+        This model has been crafted using data sourced from car tracker, particularly Sanku’s primary fleet management tool, covering the period from **October 2023 to January 2024.** As of now, we are working with a sample size of **5,000** entries out of a total of **21,914** entries. Due to computational limitations, we are constrained to using this sample, but we anticipate leveraging the entire dataset during the piloting and production phases.
 
-    Moving forward, our vision is to evolve this model into a predictive tool that will optimize routes for field operations teams in Tanzania, enhancing efficiency and driving cost savings.
+        Our primary goal with this model is diagnostic in nature, focusing on the following objectives:
+        
+        - Analyzing fuel consumption to identify potential savings.
+        - Evaluating time consumption to identify areas for efficiency gains.
+        - Assessing per diem costs and identifying potential savings.
+        - Estimating maintenance costs and identifying opportunities for cost reductions.
 
-    *The landing page for our web application will showcase the insights gleaned from this optimization model. We invite you to explore and engage with the features as we continue to refine and enhance our system to meet your operational needs.*
-    """)
-    # Visualization options
-    st.sidebar.title("Visualization Options")
-    show_start_geofence_out_of_route = st.sidebar.checkbox("Show Start Out of Geofence")
-    show_end_geofence_out_of_route = st.sidebar.checkbox("Show End Out of Geofence")
-    show_within_geofence = st.sidebar.checkbox("Show Within the Geofence")
-    show_out_of_route_network_diagram = st.sidebar.checkbox("Show Out of Geofence")
-    show_fuel_consumption_comparison = st.sidebar.checkbox("Show Out of Geofence Fuel Consumption vs Within Geofence Fuel Consumption")
+        Moving forward, our vision is to evolve this model into a predictive tool that will optimize routes for field operations teams in Tanzania, enhancing efficiency and driving cost savings.
 
-    if show_start_geofence_out_of_route:
-        # Plot null values for 'Start Geofence'
-        plot_null_values(df, 'Start Geofence')
+        *The landing page for our web application will showcase the insights gleaned from this optimization model. We invite you to explore and engage with the features as we continue to refine and enhance our system to meet your operational needs.*
+        """)
 
-    if show_end_geofence_out_of_route:
-        # Plot null values for 'End Geofence'
-        plot_null_values(df, 'End Geofence')
+    elif page == "Visualizations":
+        # Load dataset
+        df = pd.read_csv('clean_tripdd.csv')
+        df['Start Time'] = pd.to_datetime(df['Start Time'])
+        df['End Time'] = pd.to_datetime(df['End Time'])
+        df['Start Month'] = df['Start Time'].dt.month_name()
 
-    if show_within_geofence:
-        # Dropdowns to select a specific registration number and start location
-        registration_options = df['Registration'].unique()
-        selected_registration = st.selectbox("Select Registration Number", registration_options)
+        # Visualization options
+        st.sidebar.title("Visualization Options")
+        selected_option = st.sidebar.radio("Select Option", ["Trips that Started Out of Geofence", "Trips that Ended Out of Geofence", "Show Within the Geofence", "Show Out of Geofence", "Show Out of Geofence Fuel Consumption vs Within Geofence Fuel Consumption"])
 
-        start_location_options = df['Start Location'].unique()
-        selected_start_location = st.selectbox("Select Start Location", start_location_options)
+        if selected_option == "Trips that Started Out of Geofence":
+            plot_null_values(df, 'Start Geofence')
 
-        # Checkbox for visualizing number of trips per day on the selected registration number
-        show_trips_per_day = st.checkbox("Show Trips Per Day")
+        elif selected_option == "Trips that Ended Out of Geofence":
+            plot_null_values(df, 'End Geofence')
 
-        # Draw the network graph for the selected registration number and start location
-        draw_network_graph(df, selected_registration, selected_start_location, show_trips_per_day)
-
-    if show_out_of_route_network_diagram:
-        # Dropdowns to select a specific registration number and start location for out of route network diagram
-        registration_options = df['Registration'].unique()
-        selected_registration_out_of_route = st.selectbox("Select Registration Number", registration_options)
-
-        start_location_options = df['Start Location'].unique()
-        selected_start_location_out_of_route = st.selectbox("Select Start Location", start_location_options)
-
-        # Checkbox for visualizing number of trips per day on the selected registration number for out of route network diagram
-        show_trips_per_day_out_of_route = st.checkbox("Show Trips Per Day")
-
-        # Draw the out of route network graph for the selected registration number and start location
-        draw_out_of_route_network_graph(df, selected_registration_out_of_route, selected_start_location_out_of_route, show_trips_per_day_out_of_route)
-
-    if show_fuel_consumption_comparison:
-        # Radio buttons for selecting registration number or all registration numbers
-        fuel_comparison_option = st.radio("Select Registration Number or All Registration Numbers", ["Select Registration Number", "Select All Registration Numbers"])
-
-        # If "Select All Registration Numbers" is chosen, use the entire dataframe
-        if fuel_comparison_option == "Select All Registration Numbers":
-            filtered_df_fuel_comparison = df
-        else:
+        elif selected_option == "Show Within the Geofence":
+            # Dropdowns to select a specific registration number and start location
             registration_options = df['Registration'].unique()
-            selected_registration_fuel_comparison = st.selectbox("Select Registration Number", registration_options)
-            # Filter the dataframe based on the selected registration number
-            filtered_df_fuel_comparison = df[df['Registration'] == selected_registration_fuel_comparison]
+            selected_registration = st.selectbox("Select Registration Number", registration_options)
 
-        # Calculate total fuel cost for both on-route and out-of-route trips
-        on_route_fuel_cost, out_of_route_fuel_cost, percentage_on_route, percentage_out_of_route = calculate_fuel_costs(filtered_df_fuel_comparison)
+            start_location_options = df['Start Location'].unique()
+            selected_start_location = st.selectbox("Select Start Location", start_location_options)
 
-        # Bar plot for the comparison
-        fig, ax = plt.subplots()
-        ax.bar(['Within Geofence', 'Out of Geofence'], [on_route_fuel_cost, out_of_route_fuel_cost], color=['skyblue', 'orange'])
-        ax.set_ylabel('Total Fuel Cost (TZS)')
-        ax.set_title('Out of Goefence Fuel Consumption vs Within Geofence Fuel Consumption')
+            # Checkbox for visualizing number of trips per day on the selected registration number
+            show_trips_per_day = st.checkbox("Show Trips Per Day")
 
-        # Annotate percentages on the bars
-        ax.text(0, on_route_fuel_cost, f'{percentage_on_route:.2f}%', ha='center', va='bottom', color='black', fontweight='bold')
-        ax.text(1, out_of_route_fuel_cost, f'{percentage_out_of_route:.2f}%', ha='center', va='bottom', color='black', fontweight='bold')
+            # Draw the network graph for the selected registration number and start location
+            draw_network_graph(df, selected_registration, selected_start_location, show_trips_per_day)
 
-        st.pyplot(fig)
+        # Add more visualization options as needed
 
 if __name__ == "__main__":
     main()

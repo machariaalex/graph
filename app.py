@@ -63,7 +63,7 @@ def plot_null_values(data, column):
     elif column == 'End Geofence':
         # Insights for Trips that Started Out of Geofence
         st.subheader("Insights:")
-        st.write("1. An average of 62.62% of the amount spent on fuel was out of the geofence.")
+        st.write("1. An average of 64% of the amount spent on fuel was out of the geofence.")
         st.write("2. Three out of 5 trips made by RMs in day started out of the geofence.")
 
 # Function to draw network graph

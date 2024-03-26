@@ -7,35 +7,38 @@ import calendar
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
+# Function to calculate the total cost on fuel
 def calculate_total_fuel_cost(distance):
     # 1 litre covers 9 km, and 1 litre is sold at 3100 TZS
     consumption_per_km = 1 / 9
     cost_per_litre = 3100
-    return round((distance * consumption_per_km * cost_per_litre), 2)
-
-
+    return round(distance * consumption_per_km * cost_per_litre)
 
 
 # Function to calculate the total fuel cost per month
 def calculate_total_fuel_cost_per_month(df):
     df['Total Cost on Fuel (TZS)'] = df['Distance'].apply(calculate_total_fuel_cost)
+    df['Total Cost on Fuel (TZS)'] = df['Total Cost on Fuel (TZS)'].round().astype(int)  # Round off to nearest whole number
     total_fuel_cost_per_month = df.groupby(df['Start Month'])['Total Cost on Fuel (TZS)'].sum().reset_index(name='Total Fuel Cost')
     return total_fuel_cost_per_month
 
-# Function to calculate the total fuel cost per month
-def calculate_total_fuel_cost_per_month(df):
-    df['Total Cost on Fuel (TZS)'] = df['Distance'].apply(calculate_total_fuel_cost)
-    total_fuel_cost_per_month = df.groupby(df['Start Month'])['Total Cost on Fuel (TZS)'].sum().reset_index(name='Total Fuel Cost')
-    total_distance_per_month = df.groupby(df['Start Month'])['Distance'].sum().reset_index(name='Total Distance Covered')
-    total_trips_per_month = df.groupby(df['Start Month']).size().reset_index(name='Total Trips')
-    total_cost_per_month = total_trips_per_month['Total Trips'] * 90000  # Per diem cost calculation
-    
-    # Combine the calculated values into a single dataframe
-    total_monthly_data = pd.concat([total_trips_per_month['Start Month'], total_trips_per_month['Total Trips'], total_distance_per_month['Total Distance Covered'], total_fuel_cost_per_month['Total Fuel Cost'], total_cost_per_month], axis=1)
-    total_monthly_data.columns = ['Start Month', 'Total Trips', 'Total Distance Covered (km)', 'Total Fuel Cost (TZS)', 'Total Cost (Per Diem)']
-    
-    return total_monthly_data
 
+
+# Function to calculate fuel costs and percentages for the selected month
+def calculate_fuel_costs(df):
+    on_route_df = df[~df['Start Geofence'].isnull() & ~df['End Geofence'].isnull()]
+    out_of_route_df = df[df['Start Geofence'].isnull() & df['End Geofence'].isnull()]
+
+    on_route_fuel_cost = on_route_df['Distance'].apply(calculate_total_fuel_cost).sum()
+    out_of_route_fuel_cost = out_of_route_df['Distance'].apply(calculate_total_fuel_cost).sum()
+
+    total_fuel_cost = on_route_fuel_cost + out_of_route_fuel_cost
+
+    # Calculate percentages
+    percentage_on_route = (on_route_fuel_cost / total_fuel_cost) * 100
+    percentage_out_of_route = (out_of_route_fuel_cost / total_fuel_cost) * 100
+
+    return on_route_fuel_cost, out_of_route_fuel_cost, percentage_on_route, percentage_out_of_route
 
 def plot_null_values(data, column):
     # Create a bar plot to visualize null values with a colored background
@@ -57,12 +60,14 @@ def plot_null_values(data, column):
     # Add insights below the chart
     if column == 'Start Geofence':
         st.subheader("Insights:")
-        st.write("i. Approximately  of 60% of the amount spent on fuel was out of the geofence.")
-        st.write("ii.  3 out of 5 trips made by RMs in a day started out of the geofence.")
+        st.write("1.  3 out of 5 trips made by RMs in a day started out of the geofence.")
+
+        st.write("2. Approximately 60% of the amount spent on fuel was on trips out of the geofence(start)")
     elif column == 'End Geofence':
         st.subheader("Insights:")
-        st.write("i.  Approximately of 64% of the amount spent on fuel was out of the end of the geofence.")
-        st.write("ii.  3 out of 5 trips made by RMs in a day started out of the geofence.")
+        st.write("1.  3 out of 5 trips made by RMs in a day started out of the geofence.")
+        st.write("2.  Approximately 60% of the amount spent on fuel was on trips out of the geofence(end)")
+        
 
 
 def draw_network_graph(df, selected_registration, selected_start_location, show_trips_per_day):
@@ -100,7 +105,7 @@ def draw_network_graph(df, selected_registration, selected_start_location, show_
     # Table showing start month, start location, end time, end location, distance, and total cost on fuel of trips plotted on the network diagram
     st.write("Trips Plotted on Network Diagram:")
     additional_info_table = filtered_df_network[['Start Month', 'End Time', 'Start Location', 'End Location', 'Distance']]
-    additional_info_table['Total Cost on Fuel (TZS)'] = additional_info_table['Distance'].apply(lambda x: round(calculate_total_fuel_cost(x))).astype(int)  # Round and convert to integer
+    additional_info_table['Total Cost on Fuel (TZS)'] = additional_info_table['Distance'].apply(calculate_total_fuel_cost)
     st.table(additional_info_table)
 
     # Total number of trips made per month for the selected registration number and start location
@@ -130,7 +135,6 @@ def draw_network_graph(df, selected_registration, selected_start_location, show_
     # Line chart showing trips made per day for the selected registration number if checkbox is selected
     if show_trips_per_day:
         draw_trips_per_day_chart(filtered_df)
-
 
 def draw_out_of_route_network_graph(df, selected_registration, selected_start_location, show_trips_per_day_out_of_route):
     # Filter the dataframe for trips where both Start and End Geofence are null (Out of Route)
@@ -167,7 +171,7 @@ def draw_out_of_route_network_graph(df, selected_registration, selected_start_lo
     # Table showing start month, start location, end time, end location, distance, and total cost on fuel of out of route trips
     st.write("Trips Out of Route:")
     out_of_route_table = out_of_route_df_network[['Start Month', 'End Time', 'Start Location', 'End Location', 'Distance']]
-    out_of_route_table['Total Cost on Fuel (TZS)'] = out_of_route_table['Distance'].apply(lambda x: round(calculate_total_fuel_cost(x))).astype(int)  # Round and convert to integer
+    out_of_route_table['Total Cost on Fuel (TZS)'] = out_of_route_table['Distance'].apply(calculate_total_fuel_cost)
     st.table(out_of_route_table)
 
     # Total number of trips per month that were out of route for the selected registration number and start location
@@ -185,9 +189,6 @@ def draw_out_of_route_network_graph(df, selected_registration, selected_start_lo
 
     # Calculate total fuel cost per month for out of route trips
     total_fuel_cost_out_of_route_per_month = calculate_total_fuel_cost_per_month(out_of_route_df_network)
-    # Check if the column exists in the DataFrame before rounding
-    if 'Total Fuel Cost (TZS)' in total_fuel_cost_out_of_route_per_month.columns:
-        total_fuel_cost_out_of_route_per_month['Total Fuel Cost (TZS)'] = total_fuel_cost_out_of_route_per_month['Total Fuel Cost (TZS)'].apply(lambda x: round(x)).astype(int)
     # Add total distance covered for the selected registration number to the table
     total_fuel_cost_out_of_route_per_month['Total Distance Covered (km)'] = out_of_route_df['Distance'].sum()
 
@@ -202,26 +203,6 @@ def draw_out_of_route_network_graph(df, selected_registration, selected_start_lo
         draw_trips_per_day_chart(out_of_route_df)
 
 
-# Function to filter DataFrame based on selected day of the week
-def filter_trips_by_day(df, selected_day):
-    selected_day_trips = df[df['Start Time'].dt.day_name() == selected_day]
-    return selected_day_trips
-
-# Visualization options
-st.sidebar.title("Visualization Options")
-selected_option = st.sidebar.radio("Select Option", ["Trips Out of Geofence Fuel Consumption vs Trips Within Geofence Fuel Consumption", "Trips that Started Out of Geofence", "Trips that Ended Out of Geofence", "Trips Within the Geofence Analysis", "Trips Out of Geofence Analysis", "Trips by Day Analysis", "Trips by Day Analysis"])
-
-# If "Trips by Day Analysis" is selected, allow the user to select the day of the week
-if selected_option == "Trips by Day Analysis":
-    selected_day = st.sidebar.selectbox("Select Day of the Week", ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])
-
-    # Filter the DataFrame based on the selected day of the week
-    filtered_df_by_day = filter_trips_by_day(df, selected_day)
-
-    # Display the number of trips on the selected day of the week
-    st.write(f"Number of trips on {selected_day}: {len(filtered_df_by_day)}")
-
-
 
 def draw_trips_per_day_chart(df):
     # Line chart showing trips made per day
@@ -229,7 +210,7 @@ def draw_trips_per_day_chart(df):
     trips_per_day_chart['Start Time'] = pd.to_datetime(trips_per_day_chart['Start Time'])
     st.subheader("Trips Made per Day:")
     st.line_chart(trips_per_day_chart.set_index('Start Time'))
-logo_path = 'sank.jpeg'
+logo_path = 'WhatsApp Image 2024-03-22 at 12.26.22 PM.jpeg'
 
 def main():
     # Load dataset
@@ -253,7 +234,7 @@ def main():
     with main_col:
         st.title("Route Optimization System for Field Operations in Tanzania")
         st.sidebar.title("Select to Display Visualization Options")
-        display_option = st.sidebar.radio("Select to Display Visualization Options", ["About the Project", "Project Analysis"])
+        display_option = st.sidebar.radio("Select to Display Visualization Options", ["About the Project", "Route Analysis"])
 
         if display_option == "About the Project":
             # Displaying information about the project..            # Visualization options...
@@ -273,7 +254,9 @@ Our primary goal with this version 1 model is diagnostic in nature, focusing on 
 
 **Here are the key findings:**
 
-1.The total fuel budget for Q1 was Tsh 42,350,000. However, our analysis only covers 5,000 entries out of a total of 21,914 entries. Based on our sample, the estimated total budget would be Tsh 9,662,773. Approximately Tsh 8,933,233, or roughly 92.45%, was spent on wasted trips.
+1. The total fuel budget for Q1 was Tsh 42,350,000. However, our analysis only covers 5,000 entries out of a total of 21,914 entries. Based on our sample, the estimated total budget would be Tsh 9,662,773. Approximately Tsh 8,933,233, or roughly 92.45%, was spent on wasted trips.
+
+2. Wednesday had the highest number trips at 1080 while Sunday had the lowest number of trips at 164
 Moving forward, version 2 will evolve into a predictive tool that will optimize routes for field operations teams in Tanzania, enhancing efficiency and driving cost savings.
 
 *The landing page for our web application will showcase the insights gleaned from this optimization model. We invite you to explore and engage with the features as we continue to refine and enhance our system to meet your operational needs.*
@@ -281,9 +264,9 @@ Moving forward, version 2 will evolve into a predictive tool that will optimize 
             st.markdown("<br>", unsafe_allow_html=True)
             st.markdown("**<p style='font-size: 12px;'>Product of the IS Team. All Rights Reserved. &copy; 2024</p>**", unsafe_allow_html=True)
         else:
-            # Visualization options
+           # Visualization options
             st.sidebar.title("Visualization Options")
-            selected_option = st.sidebar.radio("Select Option", ["Trips that Started Out of Geofence", "Trips that Ended Out of Geofence", "Trips Within the Geofence Analysis", "Trips Out of Geofence Analysis", "Trips Out of Geofence Fuel Consumption vs Trips Within Geofence Fuel Consumption"])
+            selected_option = st.sidebar.radio("Select Option", ["Trips Out of Geofence Fuel Consumption vs Trips Within Geofence Fuel Consumption", "Trips that Started Out of Geofence", "Trips that Ended Out of Geofence", "Trips Within the Geofence Analysis", "Trips Out of Geofence Analysis"])
 
             if selected_option == "Trips that Started Out of Geofence":
                 plot_null_values(df, 'Start Geofence')
@@ -327,8 +310,6 @@ Moving forward, version 2 will evolve into a predictive tool that will optimize 
                 st.markdown("<br>", unsafe_allow_html=True)
                 st.markdown("Product of the IS Team. All Rights Reserved. &copy; 2024")
 
-                
-
             elif selected_option == "Trips Out of Geofence Fuel Consumption vs Trips Within Geofence Fuel Consumption":
                 # Radio buttons for selecting registration number or all registration numbers
                 fuel_comparison_option = st.radio("Select Registration Number or All Registration Numbers", ["Select Registration Number", "Select All Registration Numbers"])
@@ -343,7 +324,7 @@ Moving forward, version 2 will evolve into a predictive tool that will optimize 
                     filtered_df_fuel_comparison = df[df['Registration'] == selected_registration_fuel_comparison]
 
                 # Calculate total fuel cost for both on-route and out-of-route trips
-                on_route_fuel_cost, out_of_route_fuel_cost, percentage_on_route, percentage_out_of_route = calculate_total_fuel_cost(filtered_df_fuel_comparison)
+                on_route_fuel_cost, out_of_route_fuel_cost, percentage_on_route, percentage_out_of_route = calculate_fuel_costs(filtered_df_fuel_comparison)
 
                 # Bar plot for the comparison
                 fig, ax = plt.subplots()
@@ -363,4 +344,3 @@ Moving forward, version 2 will evolve into a predictive tool that will optimize 
 
 if __name__ == "__main__":
     main()
-

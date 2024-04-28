@@ -242,7 +242,7 @@ def main():
             st.subheader("Welcome to Version 1 of our Route Optimization System")
             st.markdown("""
             This model has been crafted using data sourced from car tracker, particularly Sanku’s primary fleet management tool, covering the period from **October 2023 to January 2024.** As of now, we are working with a sample size of **5,000** entries out of a total of **21,914** entries. Due to computational limitations, we are constrained to using this sample, but we anticipate leveraging the entire dataset during the piloting and production phases.
-Our primary goal with this version 1 model is diagnostic in nature, focusing on the following objectives:
+Currently, only the warehouses, miller location and the HQ have been incorporated into the geofences, we will add RM homes as we progress.Our primary goal with this version 1 model is diagnostic in nature, focusing on the following objectives:
             
 - Analyzing fuel consumption to identify potential savings.
 - Evaluating time consumption to identify areas for efficiency gains.

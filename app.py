@@ -16,6 +16,12 @@ def calculate_total_fuel_cost(distance):
 
 
 # Function to calculate the total fuel cost per month
+# Function to calculate the total fuel cost per month
+def calculate_total_fuel_cost_per_month(df):
+    df['Total Cost on Fuel (TZS)'] = df['Distance'].apply(calculate_total_fuel_cost)
+    df['Total Cost on Fuel (TZS)'] = df['Total Cost on Fuel (TZS)'].round().astype(int)  # Round off to nearest whole number
+    total_fuel_cost_per_month = df.groupby(df['Start Month'])['Total Cost on Fuel (TZS)'].sum().reset_index(name='Total Fuel Cost')
+    return total_fuel_cost_per_month
 # Function to calculate the total cost on fuel
 def calculate_total_fuel_cost(distance):
     # Check if distance is NaN
